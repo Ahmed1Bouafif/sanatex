@@ -8,7 +8,7 @@ export default function Home() {
       <section className="relative text-white h-[85vh] lg:h-screen flex items-end">
         <img
           className="absolute object-cover w-full h-full "
-          src="https://multinetcom.ch/wp-content/uploads/2020/07/banner-img-2-scaled.jpg"
+          src="/banner.png"
           alt=""
         />
         <Container className="lg:pb-16">
