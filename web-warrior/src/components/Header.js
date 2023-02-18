@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import Container from './Container';
-import NavMenuOpen from './NavMenuOpen';
+import NavMenuOpen from './NavMenu/NavMenuOpen';
 
 export default function Header({ handleOpenMenu }) {
   return (
