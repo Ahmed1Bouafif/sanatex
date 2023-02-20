@@ -5,4 +5,9 @@
 
 * {
   font-family: 'Maven Pro', sans-serif !important;
+  color: white;
+}
+
+body {
+  background-color: #3c424b;
 }
