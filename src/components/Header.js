@@ -11,7 +11,7 @@ export default function Header({ handleOpenMenu }) {
           to="/"
           className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold"
         >
-          Logo
+          Sanate<span className="text-blue-500">X</span>
         </Link>
         <div className="flex gap-4">
           <NavMenuOpen />

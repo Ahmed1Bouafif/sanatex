@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       <section className="relative text-white h-[85vh] lg:h-screen flex items-end">
         <img
           className="absolute object-cover w-full h-full "
@@ -26,6 +26,6 @@ export default function Home() {
         </Container>
       </section>
       <section className="h-screen bg-black"></section>
-    </Layout>
+    </>
   );
 }
