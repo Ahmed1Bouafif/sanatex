@@ -14,7 +14,7 @@ export default function Header({ handleOpenMenu }) {
           Logo
         </Link>
         <div className="flex gap-4">
-          <NavMenuOpen handleOpenMenu={handleOpenMenu} />
+          <NavMenuOpen />
         </div>
       </Container>
     </header>

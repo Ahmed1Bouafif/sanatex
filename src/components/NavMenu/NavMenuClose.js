@@ -1,6 +1,8 @@
 import React from 'react';
+import { useMenuContext } from '../../context/store';
 
-export default function NavMenuClose({ handleCloseMenu }) {
+export default function NavMenuClose() {
+  const { handleCloseMenu } = useMenuContext();
   return (
     <button onClick={handleCloseMenu}>
       <svg

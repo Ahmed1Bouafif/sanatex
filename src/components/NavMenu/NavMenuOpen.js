@@ -1,6 +1,8 @@
 import React from 'react';
+import { useMenuContext } from '../../context/store';
 
-export default function NavMenuOpen({ handleOpenMenu }) {
+export default function NavMenuOpen() {
+  const { handleOpenMenu } = useMenuContext();
   return (
     <button onClick={handleOpenMenu}>
       <svg

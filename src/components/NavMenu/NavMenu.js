@@ -1,9 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { useMenuContext } from '../../context/store';
 import NavMenuClose from './NavMenuClose';
 import NavMenuList from './NavMenuList';
 
-export default function NavMenu({ openMenu, handleCloseMenu }) {
+export default function NavMenu() {
+  const { openMenu } = useMenuContext();
   return (
     <div
       className={`fixed top-0 ${
@@ -12,7 +14,7 @@ export default function NavMenu({ openMenu, handleCloseMenu }) {
     >
       <div className="flex justify-between items-center">
         <div className="text-blue-500 text-2xl font-bold">Logo</div>
-        <NavMenuClose handleCloseMenu={handleCloseMenu} />
+        <NavMenuClose />
       </div>
 
       <NavMenuList />
