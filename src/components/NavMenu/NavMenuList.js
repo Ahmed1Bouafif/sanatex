@@ -1,11 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import { routes } from '../../routes';
+import { navLinks } from '../../data/nav-links';
 
 export default function NavMenuList() {
   return (
     <ul className="flex flex-col">
-      {routes.map(({ name, pathname }) => (
+      {navLinks.map(({ name, pathname }) => (
         <li key={name} className="w-max p-[10px] group ">
           <Link
             to={pathname}

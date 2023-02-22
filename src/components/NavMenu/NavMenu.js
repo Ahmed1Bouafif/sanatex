@@ -10,7 +10,7 @@ export default function NavMenu() {
     <div
       className={`fixed top-0 ${
         openMenu ? 'right-0' : '-right-[100%]'
-      }  z-20 bg-white h-full w-full sm:w-[400px] p-12 flex flex-col justify-between transition-all`}
+      }  z-20 bg-white h-full w-full sm:w-[400px] p-12 flex flex-col justify-between transition-all ease-in-out duration-300`}
     >
       <div className="flex justify-between items-center">
         <div className="text-blue-500 text-2xl font-bold">Logo</div>

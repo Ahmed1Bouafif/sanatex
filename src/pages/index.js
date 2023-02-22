@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </Container>
       </section>
-      <section className="h-screen bg-black"></section>
+      {/* <section className="h-screen bg-black"></section> */}
     </>
   );
 }

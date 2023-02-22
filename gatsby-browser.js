@@ -2,7 +2,6 @@ const React = require('react');
 const { Helmet } = require('react-helmet');
 const { default: Layout } = require('./src/components/Layout');
 const { StoreProvider } = require('./src/context/store');
-const { routes } = require('./src/routes');
 
 // Logs when the client route changes
 exports.onRouteUpdate = ({ location, prevLocation }) => {
@@ -12,16 +11,16 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
 
 // Wraps every page in a component
 exports.wrapPageElement = ({ path, element }) => {
-  const currentRoute = routes.find(
-    (route) => route.pathname === window.location.pathname
-  );
+  // const currentRoute = routes.find(
+  //   (route) => route.pathname === window.location.pathname
+  // );
 
-  const currentRouteName = currentRoute ? currentRoute.name : 'Not Found';
+  // const currentRouteName = currentRoute ? currentRoute.name : 'Not Found';
   return (
     <StoreProvider>
-      <Helmet>
+      {/* <Helmet>
         <title>{currentRouteName}</title>
-      </Helmet>
+      </Helmet> */}
       <Layout>{element}</Layout>
     </StoreProvider>
   );
