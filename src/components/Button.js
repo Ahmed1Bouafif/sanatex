@@ -22,7 +22,7 @@ export const Button = ({ children, link = '#', variant = 'primary' }) => {
   return (
     <Link
       to={link}
-      className={`group inline-flex  items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none leading-normal cursor-pointer ${styles}`}
+      className={`group inline-flex  items-center justify-center rounded-none py-3 px-8 text-sm focus:outline-none leading-normal cursor-pointer ${styles}`}
     >
       {children}
     </Link>
