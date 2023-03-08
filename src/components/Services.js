@@ -2,7 +2,6 @@ import React from 'react';
 import Container from './Container';
 import { Section } from './Section';
 import {
-  CloudIcon,
   ClipboardDocumentCheckIcon,
   RectangleStackIcon,
   PresentationChartLineIcon,
@@ -13,8 +12,9 @@ import {
   ServerIcon,
   LinkIcon,
 } from '@heroicons/react/24/outline';
-
 import { ServiceCard } from './ServiceCard';
+
+import { motion } from 'framer-motion';
 
 export const Services = () => {
   const services = [
@@ -59,8 +59,14 @@ export const Services = () => {
         </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-4 ">
-          {services.map((service) => (
-            <ServiceCard {...service} />
+          {services.map((service, idx) => (
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: idx / 20 }}
+            >
+              <ServiceCard {...service} />
+            </motion.div>
           ))}
         </div>
       </Container>
