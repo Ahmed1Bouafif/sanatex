@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Section bg>
         <Container>
-          <h2 className="font-display text-3xl text-white tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="font-display h-[900px] text-3xl text-white tracking-tight sm:text-4xl md:text-5xl">
             Section title
           </h2>
         </Container>

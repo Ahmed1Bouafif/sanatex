@@ -5,7 +5,7 @@ export const Section = ({ children, bg = false }) => {
     <div
       className={`relative overflow-hidden ${
         bg ? 'bg-blue-600' : 'bg-white'
-      } pt-20 pb-28 sm:py-32 h-screen`}
+      } pt-20 pb-28 sm:py-32 md:pt-20 md:pb-10`}
     >
       {children}
     </div>

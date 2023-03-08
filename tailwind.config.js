@@ -8,7 +8,12 @@ module.exports = {
     lineHeight: {
       normal: '1.5rem',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        heading: ['Lexend', 'inter', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
