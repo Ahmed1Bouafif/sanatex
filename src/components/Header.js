@@ -4,7 +4,7 @@ import { Nav } from './Nav';
 
 export default function Header({ handleOpenMenu }) {
   return (
-    <header className="py-10">
+    <header className=" py-4 md:py-10">
       <Container>
         <Nav />
       </Container>

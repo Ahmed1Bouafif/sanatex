@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { AboutUs } from '../components/AboutUs';
 import Container from '../components/Container';
 import { Hero } from '../components/Hero';
 import Layout from '../components/Layout';
@@ -9,13 +10,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Section bg>
-        <Container>
-          <h2 className="font-display h-[900px] text-3xl text-white tracking-tight sm:text-4xl md:text-5xl">
-            Section title
-          </h2>
-        </Container>
-      </Section>
+      <AboutUs />
       <Services />
     </>
   );
