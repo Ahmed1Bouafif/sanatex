@@ -14,7 +14,7 @@ export const Section = ({ children, bg = false, title }) => {
           initial={{ x: -200, opacity: 0 }}
           whileInView={{ x: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className={`z-10 text-center md:text-left font-display text-4xl tracking-tight sm:text-5xl md:text-6xl ${
+          className={`text-black z-10 text-center md:text-left font-display text-4xl tracking-tight sm:text-5xl md:text-6xl ${
             bg && 'text-white'
           }`}
         >
