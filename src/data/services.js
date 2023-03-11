@@ -27,7 +27,7 @@ export const services = [
     icon: LinkIcon,
   },
   {
-    title: 'Splicing  / Connection technology',
+    title: 'Connection technology',
     icon: ServerIcon,
   },
   {
