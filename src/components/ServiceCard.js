@@ -1,23 +1,76 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
-import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowUpRightIcon,
+  ArrowDownIcon,
+  ArrowUpIcon,
+  ChevronDoubleDownIcon,
+} from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 
-export const ServiceCard = ({ title, icon: Icon }) => {
+export const ServiceCard = ({
+  title,
+  icon: Icon,
+  index,
+  activeService,
+  handleOpen,
+  handleClose,
+  setActiveService,
+}) => {
+  const isActive = index === activeService;
+  useEffect(() => {
+    console.log(index, activeService, isActive);
+  });
+
+  const ArrowIcon = isActive ? ArrowUpIcon : ArrowDownIcon;
   return (
-    <motion.div className="relative bg-blue-40s0  flex flex-col p-8 gap-10 hover: transition-all rounded-[4px] overflow-hidden group cursor-pointer justify-between">
-      <div className="absolute h-full w-full top-0 left-0 bg-gradient-to-br from-blue-500 to-purple-500 group-hover:opacity-100 opacity-0 z-0 transition-all"></div>
+    <motion.div
+      className={`relative bg-blue-40s0  flex flex-col p-8 gap-10 transition-all rounded-[4pxs] ${
+        activeService !== null && ' hover:rounded-b-none'
+      } ${
+        isActive && 'rounded-b-none'
+      } overflow-hidden group cursor-pointer justify-between h-full`}
+      onClick={
+        (e) => {
+          activeService === index ? handleClose() : handleOpen(index);
+        }
+        // setActiveService((active) => (active === index ? null : index))
+      }
+    >
+      <div
+        className={`absolute h-full w-full top-0 left-0 bg-gradient-to-br from-blue-500 to-purple-500 group-hover:opacity-100 opacity-0 z-0 transition-all`}
+      ></div>
+      <div
+        className={`absolute h-full w-full top-0 left-0 bg-black opacity-0 ${
+          isActive && 'opacity-100'
+        } z-0 transition-all`}
+      ></div>
+
       <div className="flex justify-center md:justify-start z-10">
-        <Icon className="sm:w-2/5 w-1/3 group-hover:stroke-white" />
+        <Icon
+          className={`sm:w-2/5 w-1/3 group-hover:stroke-white ${
+            isActive && 'stroke-white'
+          }`}
+        />
       </div>
       <div className="flex flex-col gap-2 z-10 font-semibold">
-        <h3 className="text-center md:text-start text-xl sm:text-lg group-hover:text-white">
+        <h3
+          className={`text-center md:text-start text-xl sm:text-lg group-hover:text-white ${
+            isActive && 'text-white'
+          }`}
+        >
           {title}
         </h3>
         <Link className=" justify-between  items-center hidden md:flex">
-          <h4 className="group-hover:text-white">Learn more</h4>{' '}
+          <h4 className={`group-hover:text-white ${isActive && 'text-white'}`}>
+            Learn more
+          </h4>{' '}
           <span>
-            <ArrowUpRightIcon className="h-5 w-5 group-hover:stroke-white" />
+            <ChevronDoubleDownIcon
+              className={`h-5 w-5 group-hover:stroke-white transition-all ${
+                isActive && 'stroke-white rotate-180 '
+              }`}
+            />
           </span>
         </Link>
       </div>

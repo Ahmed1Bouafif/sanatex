@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { ServicesProvider } from './services-context';
 
 const StoreContext = createContext({});
 
@@ -12,7 +13,7 @@ export const StoreProvider = ({ children }) => {
         setExpandNav,
       }}
     >
-      {children}
+      <ServicesProvider>{children}</ServicesProvider>
     </StoreContext.Provider>
   );
 };

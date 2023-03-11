@@ -13,6 +13,10 @@ module.exports = {
         heading: ['Lexend', 'inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
       },
+      colors: {
+        black: '#191a1c',
+        white: '#fafafd',
+      },
     },
   },
   plugins: [],

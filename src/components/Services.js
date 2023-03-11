@@ -1,68 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from './Container';
 import { Section } from './Section';
-import {
-  ClipboardDocumentCheckIcon,
-  RectangleStackIcon,
-  PresentationChartLineIcon,
-  HomeIcon,
-  WrenchScrewdriverIcon,
-  WifiIcon,
-  SignalIcon,
-  ServerIcon,
-  LinkIcon,
-} from '@heroicons/react/24/outline';
+
 import { ServiceCard } from './ServiceCard';
 
 import { motion } from 'framer-motion';
+import { ServiceDescription } from './ServiceDescription';
+import { ServiceList } from './ServiceList';
+import { services } from '../data/services';
+import useServices from '../context/services-context';
 
 export const Services = () => {
-  const services = [
-    {
-      title: 'Acquisition',
-      icon: ClipboardDocumentCheckIcon,
-    },
-    {
-      title: 'Planning and design',
-      icon: RectangleStackIcon,
-    },
-    {
-      title: 'Network construction',
-      icon: SignalIcon,
-    },
-    {
-      title: 'Cable pull',
-      icon: LinkIcon,
-    },
-    {
-      title: 'Splicing  / Connection technology',
-      icon: ServerIcon,
-    },
-    {
-      title: 'Measurement technology',
-      icon: PresentationChartLineIcon,
-    },
-    {
-      title: 'In-house installations',
-      icon: HomeIcon,
-    },
-    {
-      title: 'Operation & Maintenance',
-      icon: WrenchScrewdriverIcon,
-    },
-  ];
+  const { activeService } = useServices();
   return (
     <Section title="Services">
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 ">
-        {services.map((service, idx) => (
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: idx / 20 }}
-          >
-            <ServiceCard {...service} />
-          </motion.div>
-        ))}
+      <div className="flex flex-col">
+        <ServiceList services={services.slice(0, services.length / 2)} />
+        {activeService < services.length / 2 && <ServiceDescription />}
+
+        <ServiceList services={services.slice(services.length / 2)} />
+        {activeService >= services.length / 2 && <ServiceDescription />}
       </div>
     </Section>
   );
