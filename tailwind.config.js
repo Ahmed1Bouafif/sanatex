@@ -8,6 +8,10 @@ module.exports = {
     lineHeight: {
       normal: '1.5rem',
     },
+    backgroundImage: {
+      'hero-lg': "url('/styles/bb.jfif')",
+      
+  },
     extend: {},
   },
   plugins: [],
