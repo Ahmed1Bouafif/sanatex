@@ -49,7 +49,7 @@ const Contact = () => {
     },
   ];
   return (
-    <div className="bg-black text-white  py-24">
+    <div className="bg-black text-white  py-20">
       <Container className="grid grid-cols-5 grid-rows-2">
         <div className="bg-red-30s0 col-span-3">
           <p className="text-white text-8xl font-heading">
@@ -64,7 +64,10 @@ const Contact = () => {
               ))}
             </div>
             <div className="flex justify-start">
-              <button className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading">
+              <button
+                type="submit"
+                className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading"
+              >
                 Submit
               </button>
             </div>
