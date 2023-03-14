@@ -1,12 +1,13 @@
 import React from 'react';
+import Contact from '../components/Contact';
 import Layout from '../components/Layout';
 
-const NotFound = () => {
+const contact = () => {
   return (
     <Layout>
-      <div className="text-9xl text-center">404</div>
+      <Contact />
     </Layout>
   );
 };
 
-export default NotFound;
+export default contact;

@@ -11,17 +11,5 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
 
 // Wraps every page in a component
 exports.wrapPageElement = ({ path, element }) => {
-  // const currentRoute = routes.find(
-  //   (route) => route.pathname === window.location.pathname
-  // );
-
-  // const currentRouteName = currentRoute ? currentRoute.name : 'Not Found';
-  return (
-    <StoreProvider>
-      {/* <Helmet>
-        <title>{currentRouteName}</title>
-      </Helmet> */}
-      <Layout>{element}</Layout>
-    </StoreProvider>
-  );
+  return <StoreProvider>{element}</StoreProvider>;
 };
