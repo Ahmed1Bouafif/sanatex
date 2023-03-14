@@ -1,12 +1,8 @@
 import * as React from 'react';
-import { useEffect } from 'react';
 import { AboutUs } from '../components/AboutUs';
-import Container from '../components/Container';
 import { Hero } from '../components/Hero';
 import Layout from '../components/Layout';
-import { Section } from '../components/Section';
 import { Services } from '../components/Services';
-import { graphql } from 'gatsby';
 import '../../i18n';
 // import { useLocation } from "react-router-dom"
 // import {i18next} from "i18next"

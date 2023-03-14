@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Container from './Container';
+import React from 'react';
 import { Section } from './Section';
 import { Link } from 'gatsby';
 
@@ -7,7 +6,6 @@ import { ServiceCard } from './ServiceCard';
 
 import { motion } from 'framer-motion';
 import { services } from '../data/services';
-import { Button } from './Button';
 import { useLocation } from '@reach/router';
 
 export const Services = () => {

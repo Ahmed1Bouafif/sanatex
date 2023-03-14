@@ -1,3 +1,15 @@
 {
-  "Sevices": "maliana"
+  "home": "home",
+  "about": "chi siamo",
+  "services": "servizi",
+  "contact": "contatto",
+  "headerDescription": "Sanatex, il tuo partner per la progettazione, realizzazione e manutenzione di reti di telecomunicazioni cablate.",
+  "acquisition": "acquisizione",
+  "planningAndDesign": "Pianificazione e progettazione",
+  "networkConstruction": "Costruzione di rete",
+  "cablePull": "Tiraggio cavo",
+  "connectionTechnology": "Tecnologia di connessione",
+  "measurementTechnology": "Tecnologia di misura",
+  "inHouseInstallations": "Installazioni interne",
+  "operationAndMaintenance": "Esercizio e manutenzione"
 }

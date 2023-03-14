@@ -1,3 +1,15 @@
 {
-  "Sevices": "hhhhhhhhhhhh"
+  "home": "home",
+  "about": "über uns",
+  "services": "dienstleistungen",
+  "contact": "Kontakt",
+  "headerDescription": "Sanatex, Ihr Partner für Planung, Realisierung und Wartung von drahtgebundenen Telekommunikationsnetzen.",
+  "acquisition": "erwerb",
+  "planningAndDesign": "Planung und Gestaltung",
+  "networkConstruction": "Netzwerkbau",
+  "cablePull": "Kabelzug",
+  "connectionTechnology": "Verbindungstechnik",
+  "measurementTechnology": "Messtechnik",
+  "inHouseInstallations": "Hausinstallationen",
+  "operationAndMaintenance": "Betrieb und Instandhaltung"
 }

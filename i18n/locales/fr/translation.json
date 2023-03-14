@@ -1,3 +1,15 @@
 {
-  "Sevices": "Maisooooon"
+  "home": "home",
+  "about": "à propos",
+  "services": "services",
+  "contact": "contact",
+  "headerDescription": "Sanatex, votre partenaire pour la planification, la réalisation et la maintenance des réseaux de télécommunication filaires.",
+  "acquisition": "acquisition",
+  "planningAndDesign": "Planification et conception",
+  "networkConstruction": "Construction de réseau",
+  "cablePull": "Tirage de câble",
+  "connectionTechnology": "Technologie de connexion",
+  "measurementTechnology": "Technologie de mesure",
+  "inHouseInstallations": "Installations internes",
+  "operationAndMaintenance": "Exploitation et maintenance"
 }

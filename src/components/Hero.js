@@ -1,5 +1,6 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from './Button';
 import Container from './Container';
 import { TrustedByItem } from './TrustedByItem';
@@ -16,8 +17,9 @@ const siteInfo = graphql`
 `;
 
 export const Hero = () => {
+  const { t } = useTranslation();
   const { siteMetadata } = useStaticQuery(siteInfo).site;
-  console.log(siteMetadata);
+  // console.log(siteMetadata);
   return (
     <Container className="pt-20 pb-16 text-center lg:pt-32 ">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl ">
@@ -36,7 +38,7 @@ export const Hero = () => {
         services
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        {siteMetadata.description}
+        {t('headerDescription')}
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <Button variant="secondary">Get in touch</Button>

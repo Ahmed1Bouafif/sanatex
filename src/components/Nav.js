@@ -1,13 +1,10 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import React, { useState } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
 import { useNavContext } from '../context/store';
-import { navLinks } from '../data/nav-links';
 import { Button } from './Button';
 import { NavButton } from './NavButton';
 import { NavLink } from './NavLink';
 import { NavListMobile } from './NavListMobile';
-import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
-import i18next from 'i18next';
 import { LangSelect } from './LangSelect';
 import { Logo } from './Logo';
 

@@ -4,7 +4,7 @@ import React from 'react';
 export const Logo = () => {
   return (
     <Link
-      href="/"
+      to="/"
       aria-label="Go home"
       title="Company"
       className="inline-flex items-center"

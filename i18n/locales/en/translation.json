@@ -1,3 +1,15 @@
 {
-  "Sevices": "Home"
+  "home": "Home",
+  "about": "about",
+  "services": "services",
+  "contact": "contact",
+  "headerDescription": "Sanatex, your partner for planning, realisation and maintenance of wired telecommunication networks.",
+  "acquisition": "acquisition",
+  "planningAndDesign": "Planning and design",
+  "networkConstruction": "Network construction",
+  "cablePull": "Cable pull",
+  "connectionTechnology": "Connection technology",
+  "measurementTechnology": "Measurement technology",
+  "inHouseInstallations": "In-house installations",
+  "operationAndMaintenance": "Operation & Maintenance"
 }
