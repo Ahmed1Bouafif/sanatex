@@ -1,101 +1,14 @@
 import { toUpper } from 'lodash';
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import Container from './Container';
 import FormInput from './FormInput';
 import { Section } from './Section';
+import { WriteUsForm } from './WriteUsForm';
+import { OpenPosForm } from './OpenPosForm';
 
 const Contact = () => {
-  const openPosInputs = [
-    {
-      label: 'gender (Mr/Mrs)',
-      name: 'contact-2-gender',
-      type: 'select',
-      required: false,
-    },
-    {
-      label: 'Name',
-      name: 'contact-2-name',
-      type: 'text',
-      required: true,
-    },
-    {
-      label: 'email',
-      name: 'contact-2-email',
-      type: 'email',
-      required: true,
-    },
-    {
-      label: 'Phone',
-      name: 'contact-2-phone',
-      type: 'text',
-      required: false,
-    },
-    {
-      label: 'CV',
-      name: 'contact-2-cv',
-      type: 'file',
-      required: true,
-    },
-    {
-      label: 'cover letter',
-      name: 'contact-2-cl',
-      type: 'file',
-      required: true,
-    },
-    {
-      label: 'Message',
-      name: 'contact-2-message',
-      type: 'textarea',
-      required: false,
-    },
-  ];
-
-  const writeUsInputs = [
-    {
-      label: 'First name',
-      name: 'contact-1-first',
-      type: 'text',
-      required: true,
-    },
-    {
-      label: 'Last name',
-      name: 'contact-1-last',
-      type: 'text',
-      required: true,
-    },
-    {
-      label: 'email',
-      name: 'contact-1-email',
-      type: 'email',
-      required: true,
-    },
-    {
-      label: 'Phone',
-      name: 'contact-1-phone',
-      type: 'text',
-      required: false,
-    },
-    {
-      label: 'City',
-      name: 'contact-1-city',
-      type: 'text',
-      required: false,
-    },
-    {
-      label: 'Street',
-      name: 'contact-1-street',
-      type: 'text',
-      required: false,
-    },
-    {
-      label: 'Message',
-      name: 'contact-1-message',
-      type: 'textarea',
-      required: false,
-    },
-  ];
-
-  const forms = [writeUsInputs, openPosInputs];
+  const forms = [WriteUsForm, OpenPosForm];
   const [activeTab, setActiveTab] = useState(0);
   const tabs = [
     {
@@ -121,6 +34,7 @@ const Contact = () => {
           <div className="flex w-full">
             {tabs.map((tab, idx) => (
               <button
+                key={tab.label}
                 onClick={(e) => handleChangeTab(idx)}
                 className={`w-full transition-all ${
                   activeTab === idx
@@ -132,21 +46,8 @@ const Contact = () => {
               </button>
             ))}
           </div>
-          <form className="flex flex-col bg-grseen-500  gap-4">
-            <div className="flex flex-col gap-2  bg-rsed-300 items-center">
-              {forms[activeTab]?.map((input, idx) => (
-                <FormInput key={input.name} {...input} />
-              ))}
-            </div>
-            <div className="flex justify-start">
-              <button
-                type="submit"
-                className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+          {/* {forms[activeTab]()} */}
+          {activeTab === 0 ? <WriteUsForm /> : <OpenPosForm />}
         </div>
         <div className="bg-blue-30s0 col-span-3">
           <div className="text-white h-full flex justify-center items-center">
