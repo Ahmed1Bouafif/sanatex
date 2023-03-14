@@ -53,7 +53,7 @@ export const Nav = () => {
           </div>
         </div>
         <div className="hidden sm:block">
-          <Button to="#">{capitalize(t('getInTouch'))}</Button>
+          <Button link="/contact">{capitalize(t('getInTouch'))}</Button>
         </div>
         <NavButton />
         {expandNav ? (
