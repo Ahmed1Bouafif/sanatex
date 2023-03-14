@@ -21,9 +21,9 @@ export const Footer = () => {
     },
   ];
   return (
-    <footer className="h-screen flex flex-col">
+    <footer className="h-screesn flex flex-col py-20">
       <div className="flex flex-col gap-40 justify-between px-4 pt-16  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        {/* <div className="max-w-7xl mx-auto">
           <div className="md:flex flex flex-col content-center max-w-lg text-center gap-2 md:justify-between md:items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
@@ -36,23 +36,8 @@ export const Footer = () => {
             <div className="flex">
               <Button link="/contact">CONTACT US</Button>
             </div>
-
-            {/* <div className="mt-8 md:mt-0 flex justify-center md:justify-end">
-              <a
-                href="tel:1234567890"
-                className="text-lg px-8 py-3 rounded-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-colors duration-300 mr-4"
-              >
-                Ecriver-nous
-              </a>
-              <a
-                href="mailto:contact@mynetworkcompany.com"
-                className="text-lg px-8 py-3 rounded-full bg-blue-400 text-white hover:bg-blue-300 transition-colors duration-300"
-              >
-                Poster A Pourvoir
-              </a>
-            </div> */}
-          </div>
-        </div>
+          </div> 
+        </div>*/}
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
             <Logo />
@@ -243,7 +228,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <FooterCopyright />
+      {/* <FooterCopyright /> */}
     </footer>
   );
 };
