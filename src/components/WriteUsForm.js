@@ -1,8 +1,7 @@
 import { capitalize } from 'lodash';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { writeUsFormSchema } from '../schema/writeUsFormSchema';
-import FormInput from './FormInput';
 
 const writeUsInputs = [
   {
