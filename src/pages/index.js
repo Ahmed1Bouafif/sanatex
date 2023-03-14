@@ -4,6 +4,8 @@ import { Hero } from '../components/Hero';
 import Layout from '../components/Layout';
 import { Services } from '../components/Services';
 import '../../i18n';
+import { Button } from '../components/Button';
+import Container from '../components/Container';
 // import { useLocation } from "react-router-dom"
 // import {i18next} from "i18next"
 export default function Home() {
@@ -21,6 +23,22 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <Services />
+
+      <Container className="flex justify-center py-10">
+        <div className="md:flex flex flex-col content-center max-w-lg text-center gap-2 md:justify-between md:items-center">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
+            <p className="text-lg mb-4">
+              MultiNet Communication is the first address for integrated
+              solutions in Swiss telecommunications systems.
+            </p>
+          </div>
+
+          <div className="flex">
+            <Button link="/contact">CONTACT US</Button>
+          </div>
+        </div>
+      </Container>
     </Layout>
   );
 }

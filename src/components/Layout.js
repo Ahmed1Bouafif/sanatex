@@ -18,7 +18,6 @@ export default function Layout({ children }) {
     <>
       <Header />
       {children}
-      <Contact />
       <Footer />
     </>
   );
