@@ -53,7 +53,7 @@ body {
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid #9b9b9b;
+  /* border-bottom: 2px solid #9b9b9b; */
   outline: 0;
   font-size: 0.9rem;
   color: #fff;
@@ -79,6 +79,10 @@ body {
   color: #9b9b9b;
 }
 
+/* .form__field#contact-2-gender ~ .form__label {
+  top: 40%;
+} */
+
 .form__field:focus {
   padding-bottom: 6px;
   font-weight: 500;
@@ -89,7 +93,7 @@ body {
 }
 .form__field:focus ~ .form__label {
   position: absolute;
-  top: 0;
+  top: 0 !important;
   display: block;
   transition: 0.2s;
   font-size: 0.8rem;
