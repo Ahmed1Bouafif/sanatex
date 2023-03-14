@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { capitalize } from 'lodash';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from './Button';
@@ -41,7 +42,7 @@ export const Hero = () => {
         {t('headerDescription')}
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button variant="secondary">Get in touch</Button>
+        <Button variant="secondary">{capitalize(t('getInTouch'))}</Button>
         <Button variant="tertiary">
           <svg
             aria-hidden="true"

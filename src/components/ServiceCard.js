@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import { capitalize } from 'lodash';
 
 export const ServiceCard = ({ name, title, icon: Icon }) => {
-  console.log(name);
   const { t } = useTranslation();
   return (
     <motion.div className="relative bg-blue-40s0  flex flex-col lg:p-8 p-16 gap-10 hover: transition-all rounded-[4px] overflow-hidden group cursor-pointer justify-between h-full min-w-[250px]">

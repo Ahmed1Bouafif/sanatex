@@ -4,9 +4,12 @@ import { Section } from './Section';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import { useLocation } from '@reach/router';
+import { capitalize } from 'lodash';
+import { useTranslation } from 'react-i18next';
 
 export const AboutUs = () => {
   const location = useLocation();
+  const { t } = useTranslation();
   const isAboutPage = location.pathname.includes('/about');
   return (
     <div
@@ -23,16 +26,12 @@ export const AboutUs = () => {
           transition={{ duration: 0.5 }}
           className={`z-10 text-center md:text-left font-display text-4xl tracking-tight sm:text-5xl md:text-5xl text-white`}
         >
-          About us
+          {capitalize(t('about'))}
         </motion.h2>
         <div className="flex flex-col gap-4">
           <div className="z-10 grid grid-cols-1 md:grid-cols-2">
             <p className="text-white z-10">
-              As a young, dynamic company, we have been fully committed to
-              telecommunications network construction in Switzerland since 2008.
-              Since our foundation, we have continuously specialized in the
-              corresponding activities and have constantly expanded our range of
-              services.
+              {capitalize(t('aboutDescription'))}
             </p>
           </div>
           {!isAboutPage && (

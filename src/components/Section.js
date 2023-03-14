@@ -1,8 +1,11 @@
 import React from 'react';
 import Container from './Container';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { capitalize } from 'lodash';
 
 export const Section = ({ children, bg = false, title }) => {
+  const { t } = useTranslation();
   return (
     <div
       className={`relative overflow-hidden ${
@@ -18,7 +21,7 @@ export const Section = ({ children, bg = false, title }) => {
             bg && 'text-white'
           }`}
         >
-          {title}
+          {capitalize(t(title))}
         </motion.h2>
         {children}
       </Container>

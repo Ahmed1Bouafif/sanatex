@@ -12,7 +12,7 @@ export const Services = () => {
   const location = useLocation();
   const isServicesPage = location.pathname.includes('/services');
   return (
-    <Section title="Services">
+    <Section title="services">
       <div className="flex flex-col gap-8">
         <div className="grid sm:grsid-cols-2 md:grid-cols-2 lg:grid-cols-4 ">
           {services.map((service, idx) => (

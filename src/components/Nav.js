@@ -7,6 +7,8 @@ import { NavLink } from './NavLink';
 import { NavListMobile } from './NavListMobile';
 import { LangSelect } from './LangSelect';
 import { Logo } from './Logo';
+import { capitalize } from 'lodash';
+import { useTranslation } from 'react-i18next';
 
 const menuQuery = graphql`
   query MenuQuery {
@@ -23,7 +25,7 @@ const menuQuery = graphql`
 
 export const Nav = () => {
   const { menu } = useStaticQuery(menuQuery).site.siteMetadata;
-
+  const { t } = useTranslation();
   const { expandNav, setExpandNav } = useNavContext();
 
   return (
@@ -50,11 +52,16 @@ export const Nav = () => {
             </svg>
           </div>
         </div>
-        <Button to="#">Get in touch</Button>
+        <div className="hidden sm:block">
+          <Button to="#">{capitalize(t('getInTouch'))}</Button>
+        </div>
         <NavButton />
         {expandNav ? (
           <>
-            <div className="fixed inset-0 bg-slate-300/50 opacity-100 md:hidden"></div>
+            <div
+              onClick={(e) => setExpandNav(false)}
+              className="fixed inset-0 bg-slate-300/50 opacity-100 md:hidden"
+            ></div>
             <NavListMobile />
           </>
         ) : (

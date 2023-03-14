@@ -21,8 +21,10 @@ export const LangSelect = () => {
   const { defaultLangKey, langs } =
     useStaticQuery(langQuery).site.siteMetadata.languages;
 
-  const [lang, setLang] = useState(defaultLangKey);
-  const { changeLanguage } = useI18next();
+  const [lang, setLang] = useState(
+    localStorage.getItem('i18nextLng') || defaultLangKey
+  );
+  const { language, changeLanguage } = useI18next();
   const { t, i18n } = useTranslation();
   const handleChangeLanguage = (lang) => {
     i18next.changeLanguage(lang);
@@ -30,7 +32,10 @@ export const LangSelect = () => {
     // changeLanguage(lang);
     setLang(lang);
   };
-
+  useEffect(() => {
+    console.log(language);
+    console.log(lang);
+  }, [language, lang]);
   return (
     <select
       value={lang}
@@ -39,7 +44,9 @@ export const LangSelect = () => {
       className="block py-2.5 px-1 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
     >
       {langs.map((lang) => (
-        <option value={lang}>{toUpper(lang)}</option>
+        <option key={lang} value={lang}>
+          {toUpper(lang)}
+        </option>
       ))}
     </select>
   );
