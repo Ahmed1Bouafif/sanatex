@@ -6,8 +6,10 @@ import { Button } from "./Button"
 import { NavButton } from "./NavButton"
 import { NavLink } from "./NavLink"
 import { NavListMobile } from "./NavListMobile"
-
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 export const Nav = () => {
+  const { languages, changeLanguage } = useI18next()
+  const { t } = useTranslation()
   const { expandNav, setExpandNav } = useNavContext()
   return (
     <nav className="relative z-50 flex justify-between">
@@ -19,10 +21,19 @@ export const Nav = () => {
       </div>
       <div className="flex items-center gap-x-5 md:gap-x-8">
         <div class="relative inline-block w-12">
-          <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-            <option>English</option>
-            <option>Spanish</option>
-            <option>French</option>
+          <select id="underline_select" class="block py-2.5 px-1 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+            {languages.map((lang) => {
+              ;<option
+                onClick={(e) => {
+                  e.preventDefault()
+                  changeLanguage(lang)
+                  console.log("00000000000000000000", lang)
+                }}
+                value="lang"
+              >
+                {lang}
+              </option>
+            })}
           </select>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
