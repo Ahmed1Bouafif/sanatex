@@ -49,7 +49,6 @@ const FormInput = ({ label, name, type, required }) => {
       <label className="form__label font-heading" htmlFor={name}>
         {required ? capitalize(`${label}*`) : capitalize(label)}
       </label>
-      <div className="w-full h-[2px] bg-slate-200"></div>
     </div>
   );
 };
