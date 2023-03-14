@@ -10,6 +10,6 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
 };
 
 // Wraps every page in a component
-// exports.wrapPageElement = ({ path, element }) => {
-//   return <StoreProvider>{element}</StoreProvider>;
-// };
+exports.wrapPageElement = ({ path, element }) => {
+  return <StoreProvider>{element}</StoreProvider>;
+};

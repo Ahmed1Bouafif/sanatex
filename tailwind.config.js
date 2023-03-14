@@ -10,13 +10,13 @@ module.exports = {
     },
     backgroundImage: {
       'hero-lg': "url('/styles/bb.jfif')",
-      
-  },
+    },
     extend: {},
     extend: {
       fontFamily: {
         heading: ['Lexend', 'inter', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
+        title: ['Quicksand', 'sans-serif'],
       },
       colors: {
         black: '#191a1c',

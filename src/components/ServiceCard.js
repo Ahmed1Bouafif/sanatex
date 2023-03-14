@@ -19,7 +19,10 @@ export const ServiceCard = ({ title, icon: Icon }) => {
         <h3 className="text-center lg:text-start text-2xl sm:text-lg group-hover:text-white text-black">
           {title}
         </h3>
-        <Link className=" justify-between  items-center hidden lg:flex text-black transition-all">
+        <Link
+          to="#"
+          className=" justify-between  items-center hidden lg:flex text-black transition-all"
+        >
           <h4 className="group-hover:text-white text-black">Learn more</h4>{' '}
           <span>
             <ArrowUpRightIcon className="h-5 w-5 group-hover:stroke-white text-black" />
