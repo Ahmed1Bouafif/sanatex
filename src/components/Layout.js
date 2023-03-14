@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import "../styles/global.css"
-import Header from "./Header"
-import { Footer } from "./Footer"
+import React, { useEffect } from 'react';
+import '../styles/global.css';
+import Header from './Header';
+import { Footer } from './Footer';
 // import { useLocation } from "react-router-dom"
 // import { i18next } from "i18next"
 export default function Layout({ children }) {
@@ -19,5 +19,5 @@ export default function Layout({ children }) {
       {children}
       <Footer />
     </>
-  )
+  );
 }

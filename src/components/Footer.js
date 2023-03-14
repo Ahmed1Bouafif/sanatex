@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { Button } from './Button';
 import Container from './Container';
 import { FooterCopyright } from './FooterCopyright';
 
@@ -30,7 +31,12 @@ export const Footer = () => {
                 solutions in Swiss telecommunications systems.
               </p>
             </div>
-            <div class="mt-8 md:mt-0 flex justify-center md:justify-end">
+
+            <div className="flex">
+              <Button link="/contact">CONTACT US</Button>
+            </div>
+
+            {/* <div class="mt-8 md:mt-0 flex justify-center md:justify-end">
               <a
                 href="tel:1234567890"
                 class="text-lg px-8 py-3 rounded-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white transition-colors duration-300 mr-4"
@@ -43,7 +49,7 @@ export const Footer = () => {
               >
                 Poster A Pourvoir
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">

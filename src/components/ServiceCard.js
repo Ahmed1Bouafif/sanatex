@@ -13,13 +13,13 @@ export const ServiceCard = ({ title, icon: Icon }) => {
     <motion.div className="relative bg-blue-40s0  flex flex-col lg:p-8 p-16 gap-10 hover: transition-all rounded-[4px] overflow-hidden group cursor-pointer justify-between h-full min-w-[250px]">
       <div className="service-card absolute h-full w-full top-0 left-0 bg-gradient-to-br  bg-blue-500 group-hover:opacity-100 opacity-0 z-0 transition-all "></div>
       <div className="flex justify-center lg:justify-start z-10">
-        <Icon className=" w-1/3 group-hover:stroke-white text-black" />
+        <Icon className=" w-1/3 group-hover:stroke-white text-black transition-all" />
       </div>
       <div className="flex flex-col gap-2 z-10 font-semibold ">
         <h3 className="text-center lg:text-start text-2xl sm:text-lg group-hover:text-white text-black">
           {title}
         </h3>
-        <Link className=" justify-between  items-center hidden lg:flex text-black">
+        <Link className=" justify-between  items-center hidden lg:flex text-black transition-all">
           <h4 className="group-hover:text-white text-black">Learn more</h4>{' '}
           <span>
             <ArrowUpRightIcon className="h-5 w-5 group-hover:stroke-white text-black" />

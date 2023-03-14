@@ -1,5 +1,12 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
-export default function NotFound() {
-  return <div>404</div>;
-}
+const NotFound = () => {
+  return (
+    <Layout>
+      <div className="text-9xl text-center">404</div>
+    </Layout>
+  );
+};
+
+export default NotFound;
