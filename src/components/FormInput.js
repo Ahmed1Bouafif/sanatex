@@ -5,10 +5,10 @@ const FormInput = ({ label, name, type, required }) => {
   if (type === 'textarea') {
     field = (
       <textarea
-        placeholder="Message"
+        placeholder={label}
         className="form__field text-white resize-none scrollbar-hide"
-        name="message"
-        id="message"
+        name={label}
+        id={label}
       />
     );
   } else {
@@ -18,7 +18,7 @@ const FormInput = ({ label, name, type, required }) => {
         type={type}
         id={name}
         name={name}
-        placeholder={name}
+        placeholder={label}
         required={required}
       />
     );
