@@ -1,4 +1,4 @@
-import { Link, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { navLinks } from '../data/nav-links';
 import { motion } from 'framer-motion';

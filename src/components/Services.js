@@ -7,6 +7,7 @@ import { ServiceCard } from './ServiceCard';
 import { motion } from 'framer-motion';
 import { services } from '../data/services';
 import { useLocation } from '@reach/router';
+import { Button2 } from './Button2';
 
 export const Services = () => {
   const location = useLocation();
@@ -28,12 +29,9 @@ export const Services = () => {
           ))}
         </div>
         {!isServicesPage && (
-          <Link
-            className=" px-5 py-3 border-[1px] border-black bg-white self-center hover:text-white hover:bg-black transition-all duration-300"
-            to="/services"
-          >
-            REAM MORE
-          </Link>
+          <div className="flex justify-center">
+            <Button2 to={'/services'}>READ MORE</Button2>
+          </div>
         )}
       </div>
     </Section>

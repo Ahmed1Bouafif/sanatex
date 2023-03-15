@@ -29,10 +29,10 @@ export const Nav = () => {
   const { expandNav, setExpandNav } = useNavContext();
 
   return (
-    <nav className="relative z-50 flex justify-between">
-      <div className="flex items-center md:gap-x-12">
+    <nav className="relative z-50 flex justify-between bg-gsreen-300">
+      <div className="flex items-center md:gap-x-12 bg-reds-200 md:flex-1">
         <Logo />
-        <div className="hidden md:flex md:gap-x-4">
+        <div className="hidden md:flex md:mx-auto   md:gap-x-4">
           {menu.map(({ label, slug }) => (
             <NavLink key={label} label={label} slug={slug} />
           ))}

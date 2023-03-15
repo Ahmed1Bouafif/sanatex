@@ -6,6 +6,8 @@ import { Services } from '../components/Services';
 import '../../i18n';
 import { Button } from '../components/Button';
 import Container from '../components/Container';
+import { TrustedBy } from '../components/TrustedBy';
+import Contact from '../components/Contact';
 // import { useLocation } from "react-router-dom"
 // import {i18next} from "i18next"
 export default function Home() {
@@ -21,10 +23,13 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
+      <TrustedBy />
+
       <AboutUs />
       <Services />
+      <Contact />
 
-      <Container className="flex justify-center py-10">
+      {/* <Container className="flex justify-center py-10">
         <div className="md:flex flex flex-col content-center max-w-lg text-center gap-2 md:justify-between md:items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
@@ -38,7 +43,7 @@ export default function Home() {
             <Button link="/contact">CONTACT US</Button>
           </div>
         </div>
-      </Container>
+      </Container> */}
     </Layout>
   );
 }

@@ -32,10 +32,7 @@ export const LangSelect = () => {
     // changeLanguage(lang);
     setLang(lang);
   };
-  useEffect(() => {
-    console.log(language);
-    console.log(lang);
-  }, [language, lang]);
+
   return (
     <select
       value={lang}

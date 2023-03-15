@@ -9,6 +9,7 @@ module.exports = {
     { label: 'home', slug: '/' },
     { label: 'about', slug: '/about/' },
     { label: 'services', slug: '/services/' },
+    { label: 'open positions', slug: '/contact/' },
     { label: 'contact', slug: '/contact/' },
   ],
   languages,

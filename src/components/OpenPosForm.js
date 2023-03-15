@@ -1,6 +1,7 @@
 import { capitalize } from 'lodash';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Button2 } from './Button2';
 import FormInput from './FormInput';
 const openPosInputs = [
   // {
@@ -129,12 +130,20 @@ export const OpenPosForm = () => {
         </div>
       </div>
       <div className="flex justify-start">
-        <button
+        <Button2
+          // disabled={state.submitting}
+          variant={'secondary'}
+          to={'#'}
+          className="w-full"
+        >
+          SUBMIT
+        </Button2>
+        {/* <button
           type="submit"
-          className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading"
+          className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading w-full"
         >
           Submit
-        </button>
+        </button> */}
       </div>
     </form>
   );

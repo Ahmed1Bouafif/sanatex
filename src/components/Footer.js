@@ -23,21 +23,6 @@ export const Footer = () => {
   return (
     <footer className="h-screesn flex flex-col py-20">
       <div className="flex flex-col gap-40 justify-between px-4 pt-16  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        {/* <div className="max-w-7xl mx-auto">
-          <div className="md:flex flex flex-col content-center max-w-lg text-center gap-2 md:justify-between md:items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-              <p className="text-lg mb-4">
-                MultiNet Communication is the first address for integrated
-                solutions in Swiss telecommunications systems.
-              </p>
-            </div>
-
-            <div className="flex">
-              <Button link="/contact">CONTACT US</Button>
-            </div>
-          </div> 
-        </div>*/}
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
             <Logo />
