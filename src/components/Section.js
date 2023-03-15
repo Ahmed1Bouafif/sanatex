@@ -12,6 +12,10 @@ export const Section = ({ children, bg = false, title }) => {
         bg ? 'bg-blue-600' : 'bg-white'
       } pt-20 pb-28 sm:py-32 md:py-24 md:pbx-10 `}
     >
+      <img
+        src="/services1.svg"
+        className="object-cover absolute top-0 left-0 w-full h-full"
+      />
       <Container className={'flex flex-col gap-8 '}>
         <motion.h2
           initial={{ x: -200, opacity: 0 }}
@@ -22,6 +26,9 @@ export const Section = ({ children, bg = false, title }) => {
           }`}
         >
           {capitalize(t(title))}
+          <p className="text-lg mt-4 font-heading">
+            Explore and abundance of services.
+          </p>
         </motion.h2>
         {children}
       </Container>

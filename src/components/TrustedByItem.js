@@ -1,12 +1,9 @@
 import React from 'react';
 
-export const TrustedByItem = () => {
+export const TrustedByItem = ({ logo }) => {
   return (
     <li className="flex">
-      <img
-        alt="logo"
-        src="https://salient.tailwindui.com/_next/static/media/transistor.7274e6c3.svg"
-      />
+      <img alt="logo" src={logo} />
     </li>
   );
 };

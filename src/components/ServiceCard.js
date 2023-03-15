@@ -18,7 +18,7 @@ export const ServiceCard = ({
   activeService,
 }) => {
   const { t } = useTranslation();
-  const isActive = idx === activeService;
+  const isActive = activeService && idx === activeService;
 
   useEffect(() => {
     if (isActive) console.log(idx, 'is active');
@@ -44,29 +44,31 @@ export const ServiceCard = ({
           <h3 className="text-center lg:text-start text-2xl sm:text-lg group-hover:text-white text-black">
             {capitalize(t(name))}
           </h3>
-          <Link
+          <button
             to="#"
-            className="justify-center lg:justify-between flex items-center  text-black transition-all "
+            className="justify-center lg:justify-between flex items-center  text-black transition-all"
           >
             <h4 className="group-hover:text-white text-black hidden lg:flex">
               Learn more
             </h4>{' '}
-            <span className="">
+            <span>
               {/* <ArrowUpRightIcon className="h-5 w-5 group-hover:stroke-white text-black" /> */}
               <ChevronDoubleDownIcon
-                className={`h-6 w-6  group-hover:stroke-white text-black ${
+                className={`h-6 w-6 justify-self-end group-hover:stroke-white text-black ${
                   isActive ? 'rotate-180' : 'rotate-0'
                 } transition-all`}
               />
             </span>
-          </Link>
+          </button>
         </div>
       </motion.div>
-      {isActive && (
-        <div className="bg-black  md:hidden w-full text-white p-4">
-          {description}
-        </div>
-      )}
+      <div
+        className={`bg-black  md:hidden w-full text-white p-4 origin-top scale-y-0 ${
+          isActive ? 'scale-y-100' : ''
+        } transition-transform`}
+      >
+        {description}
+      </div>
     </>
   );
 };

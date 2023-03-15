@@ -49,9 +49,172 @@ const Contact = () => {
           {/* {forms[activeTab]()} */}
           {activeTab === 0 ? <WriteUsForm /> : <OpenPosForm />}
         </div>
-        <div className="bg-blue-30s0 col-span-3 mt-8 md:mt-0">
-          <div className="text-white h-full flex justify-center items-center">
-            other contact info
+        <div className="bg-blue-30s0 col-span-3 mt-8 md:mt-0 flex items-center justify-center md:justify-start">
+          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 mt-10 md:mt-0">
+            <div className="text-center md:text-left">
+              <p className="font-semibold tracking-wide text-white">Category</p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    News
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    World
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Games
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    References
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="text-center md:text-left">
+              <p className="font-semibold tracking-wide text-white">Business</p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Web
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    eCommerce
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Business
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="text-center md:text-left">
+              <p className="font-semibold tracking-wide text-white">Apples</p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Media
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Brochure
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Nonprofit
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Educational
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Projects
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="text-center md:text-left">
+              <p className="font-semibold tracking-wide text-white">Cherry</p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Infopreneur
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Personal
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Wiki
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
+                  >
+                    Forum
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </Container>

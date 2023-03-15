@@ -29,7 +29,7 @@ export const AboutUs = () => {
           {capitalize(t('about'))}
         </motion.h2>
         <div className="flex flex-col gap-4">
-          <div className="z-10 grid grid-cols-1 md:grid-cols-2">
+          <div className="z-10 grid grid-cols-1 text-xl md:grid-cols-2">
             <p className="text-white z-10">
               {capitalize(t('aboutDescription'))}
             </p>

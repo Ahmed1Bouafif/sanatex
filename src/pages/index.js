@@ -8,6 +8,7 @@ import { Button } from '../components/Button';
 import Container from '../components/Container';
 import { TrustedBy } from '../components/TrustedBy';
 import Contact from '../components/Contact';
+import { SEO } from '../components/SEO';
 // import { useLocation } from "react-router-dom"
 // import {i18next} from "i18next"
 export default function Home() {

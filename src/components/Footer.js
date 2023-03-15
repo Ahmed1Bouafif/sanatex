@@ -47,7 +47,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-            <div>
+            <div className="text-center lg:text-left">
               <p className="font-semibold tracking-wide text-gray-800">
                 Category
               </p>
@@ -86,7 +86,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="text-center lg:text-left">
               <p className="font-semibold tracking-wide text-gray-800">
                 Business
               </p>
@@ -133,7 +133,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="text-center lg:text-left">
               <p className="font-semibold tracking-wide text-gray-800">
                 Apples
               </p>
@@ -180,7 +180,7 @@ export const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="text-center lg:text-left">
               <p className="font-semibold tracking-wide text-gray-800">
                 Cherry
               </p>

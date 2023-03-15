@@ -77,12 +77,13 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-
-          {activeService && activeService <= 2 && (
-            <div className="bg-black   w-full text-white p-4 col-span-full">
-              {services[activeService - 1]?.description}
-            </div>
-          )}
+          <div
+            className={`bg-black   w-full text-white p-8 col-span-full origin-top scale-y-0 ${
+              activeService && activeService <= 2 ? 'scale-y-100' : ''
+            } transition-transform`}
+          >
+            {services[activeService - 1]?.description}
+          </div>
           <div className="flex justify-center">
             {services.slice(2, 4).map((service) => (
               <motion.div
@@ -100,11 +101,15 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-          {activeService && activeService > 2 && activeService <= 4 && (
-            <div className="bg-black   w-full text-white p-4 col-span-full">
-              {services[activeService - 1]?.description}
-            </div>
-          )}
+          <div
+            className={`bg-black   w-full text-white p-8 col-span-full origin-top scale-y-0 ${
+              activeService && activeService > 2 && activeService <= 4
+                ? 'scale-y-100'
+                : ''
+            } transition-transform`}
+          >
+            {services[activeService - 1]?.description}
+          </div>
           <div className="flex justify-center">
             {services.slice(4, 6).map((service) => (
               <motion.div
@@ -122,11 +127,15 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-          {activeService && activeService > 4 && activeService <= 6 && (
-            <div className="bg-black   w-full text-white p-4 col-span-full">
-              {services[activeService - 1]?.description}
-            </div>
-          )}
+          <div
+            className={`bg-black   w-full text-white p-8 col-span-full origin-top scale-y-0 ${
+              activeService && activeService > 4 && activeService <= 6
+                ? 'scale-y-100'
+                : ''
+            } transition-transform`}
+          >
+            {services[activeService - 1]?.description}
+          </div>
           <div className="flex justify-center">
             {services.slice(6).map((service) => (
               <motion.div
@@ -144,11 +153,13 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-          {activeService && activeService > 6 && (
-            <div className="bg-black   w-full text-white p-4 col-span-full ">
-              {services[activeService - 1]?.description}
-            </div>
-          )}
+          <div
+            className={`bg-black   w-full text-white p-8 col-span-full origin-top scale-y-0 ${
+              activeService && activeService > 6 ? 'scale-y-100' : ''
+            } transition-transform`}
+          >
+            {services[activeService - 1]?.description}
+          </div>
         </div>
 
         <div className="hidden lg:flex lg:flex-col">
@@ -169,11 +180,13 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-          {activeService && activeService <= 4 && (
-            <div className="bg-black  w-full text-white p-4 col-span-full transition-all">
-              {services[activeService - 1]?.description}
-            </div>
-          )}
+          <div
+            className={`bg-black  w-full text-white p-8 col-span-full origin-top scale-y-0  ${
+              activeService && activeService <= 4 ? 'scale-y-100' : ''
+            } transition-transform`}
+          >
+            {services[activeService - 1]?.description}
+          </div>
 
           <div className="flex justify-center">
             {services.slice(4).map((service) => (
@@ -192,11 +205,13 @@ export const Services = () => {
               </motion.div>
             ))}
           </div>
-          {activeService && activeService > 4 && (
-            <div className="bg-black   w-full text-white p-4 col-span-full">
-              {services[activeService - 1]?.description}
-            </div>
-          )}
+          <div
+            className={`bg-black   w-full text-white p-8 col-span-full origin-top scale-y-0 ${
+              activeService && activeService > 4 ? 'scale-y-100' : ''
+            } transition-transform`}
+          >
+            {services[activeService - 1]?.description}
+          </div>
         </div>
       </div>
       {!isServicesPage && (
