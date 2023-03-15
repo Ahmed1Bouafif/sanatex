@@ -34,17 +34,23 @@ export const LangSelect = () => {
   };
 
   return (
-    <select
-      value={lang}
-      onChange={(e) => handleChangeLanguage(e.target.value)}
-      id="underline_select"
-      className="block py-2.5 px-1 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer"
-    >
-      {langs.map((lang) => (
-        <option key={lang} value={lang}>
-          {toUpper(lang)}
-        </option>
-      ))}
-    </select>
+    <>
+      <label
+        htmlFor="underline_select"
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      ></label>
+      <select
+        value={lang}
+        onChange={(e) => handleChangeLanguage(e.target.value)}
+        id="underline_select"
+        className=" border border-gray-300 text-white text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      >
+        {langs.map((lang) => (
+          <option key={lang} value={lang}>
+            {toUpper(lang)}
+          </option>
+        ))}
+      </select>
+    </>
   );
 };

@@ -44,7 +44,7 @@ export const Hero = () => {
           {t('headerDescription')}
         </p>
         <div className="mt-10 flex justify-center gap-x-6">
-          <Button2 variant={'invert'} to={'#'} className="group">
+          <Button2 variant={'invert'} to={'/contact'} className="group">
             {startCase(t('getInTouch'))}
           </Button2>
           <Button2 variant={'accent'} to={'#'} className="group">

@@ -21,11 +21,20 @@ export const Footer = () => {
     },
   ];
   return (
-    <footer className="h-screesn flex flex-col py-20">
+    <footer className="h-screesn flex flex-col py-20 ">
       <div className="flex flex-col gap-40 justify-between px-4 pt-16  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
-            <Logo />
+            <Link
+              to="/"
+              aria-label="Go home"
+              title="Company"
+              className="  md:max-w-[200px] lg:max-w-[300px] max-w-[200px] min-w-[150px]"
+            >
+              <div className="bg-bluse-500 bg-black p-4 rounded-[4px]">
+                <img src="/logo.png" alt="" className="bg-grseen-500" />
+              </div>
+            </Link>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-gray-800">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem

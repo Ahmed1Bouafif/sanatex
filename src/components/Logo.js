@@ -7,25 +7,11 @@ export const Logo = () => {
       to="/"
       aria-label="Go home"
       title="Company"
-      className="inline-flex items-center"
+      className="bg-rsed-500 md:max-w-[200px] lg:max-w-[300px] max-w-[200px] min-w-[150px]"
     >
-      <svg
-        className="w-8 text-deep-purple-accent-400 stroke-blue-600"
-        viewBox="0 0 24 24"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        fill="none"
-      >
-        <rect x="3" y="1" width="7" height="12"></rect>
-        <rect x="3" y="17" width="7" height="6"></rect>
-        <rect x="14" y="1" width="7" height="6"></rect>
-        <rect x="14" y="11" width="7" height="12"></rect>
-      </svg>
-      <span className="ml-2 text-xl font-bold tracking-wide text-black uppesrcase font-title">
-        Sanatex
-      </span>
+      <div className="bg-bluse-500">
+        <img src="/logo.png" alt="" className="bg-grseen-500" />
+      </div>
     </Link>
   );
 };

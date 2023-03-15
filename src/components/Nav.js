@@ -30,15 +30,15 @@ export const Nav = () => {
 
   return (
     <nav className="relative z-50 flex justify-between bg-gsreen-300">
-      <div className="flex items-center md:gap-x-12 bg-reds-200 md:flex-1">
+      <div className="flex items-center md:gap-x-6 bg-reds-200 md:flex-1">
         <Logo />
-        <div className="hidden md:flex md:mx-auto   md:gap-x-4">
+        <div className="hidden mdsm:flex md:mx-auto md:flex-1 md:gap-x-2 justify-center  lg:gap-x-4">
           {menu.map(({ label, slug }) => (
             <NavLink key={label} label={label} slug={slug} />
           ))}
         </div>
       </div>
-      <div className="flex items-center gap-x-5 md:gap-x-8">
+      <div className="flex items-center gap-x-2 lg:gap-x-8 ">
         <div className="relative inline-block w-12">
           <LangSelect />
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -53,7 +53,7 @@ export const Nav = () => {
           </div>
         </div>
         <div className="hidden sm:block">
-          <Button link="/contact">{capitalize(t('getInTouch'))}</Button>
+          <Button link="/contact">{capitalize(t('contact'))}</Button>
         </div>
         <NavButton />
         {expandNav ? (

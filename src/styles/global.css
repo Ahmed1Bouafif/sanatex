@@ -133,3 +133,16 @@ select:-webkit-autofill:focus {
   /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
   transition: background-color 5000s ease-in-out 0s;
 }
+
+select {
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
