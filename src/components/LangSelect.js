@@ -21,9 +21,7 @@ export const LangSelect = () => {
   const { defaultLangKey, langs } =
     useStaticQuery(langQuery).site.siteMetadata.languages;
 
-  const [lang, setLang] = useState(
-    localStorage.getItem('i18nextLng') || defaultLangKey
-  );
+  const [lang, setLang] = useState(defaultLangKey);
   const { language, changeLanguage } = useI18next();
   const { t, i18n } = useTranslation();
   const handleChangeLanguage = (lang) => {

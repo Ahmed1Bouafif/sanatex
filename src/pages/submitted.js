@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-export const submitted = () => {
+export default function submitted() {
   return (
     <Layout>
       <div className="w-full flex justify-center items-center">
@@ -11,4 +11,4 @@ export const submitted = () => {
       </div>
     </Layout>
   );
-};
+}
