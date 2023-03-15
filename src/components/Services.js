@@ -45,7 +45,7 @@ export const Services = () => {
           {services.map((service, idx) => (
             <motion.div
               key={service.title}
-              className="lg:min-h-[270px]"
+              className="maxs-h-[300px]"
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: idx / 20 }}

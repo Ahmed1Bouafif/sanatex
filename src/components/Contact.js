@@ -6,10 +6,12 @@ import FormInput from './FormInput';
 import { Section } from './Section';
 import { WriteUsForm } from './WriteUsForm';
 import { OpenPosForm } from './OpenPosForm';
+import { useFormTabContext } from '../context/store';
 
 const Contact = () => {
   const forms = [WriteUsForm, OpenPosForm];
   const [activeTab, setActiveTab] = useState(0);
+  const { activeFormTab, setActiveFormTab } = useFormTabContext();
   const tabs = [
     {
       label: 'write us',
@@ -20,7 +22,7 @@ const Contact = () => {
   ];
 
   const handleChangeTab = (idx) => {
-    setActiveTab(idx);
+    setActiveFormTab(idx);
   };
   return (
     <div className="bg-black text-white  py-20 ">
@@ -37,7 +39,7 @@ const Contact = () => {
                 key={tab.label}
                 onClick={(e) => handleChangeTab(idx)}
                 className={`w-full transition-all ${
-                  activeTab === idx
+                  activeFormTab === idx
                     ? 'text-black bg-white'
                     : 'text-white bg-black'
                 }   font-semibold py-4  sm:text-sm md:text-sm lg:text-base `}
@@ -47,7 +49,7 @@ const Contact = () => {
             ))}
           </div>
           {/* {forms[activeTab]()} */}
-          {activeTab === 0 ? <WriteUsForm /> : <OpenPosForm />}
+          {activeFormTab === 0 ? <WriteUsForm /> : <OpenPosForm />}
         </div>
         <div className="bg-blue-30s0 col-span-3 mt-8 md:mt-0 flex items-center justify-center md:justify-start">
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 mt-10 md:mt-0">

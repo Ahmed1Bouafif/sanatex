@@ -43,7 +43,7 @@ export const Hero = () => {
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
           {t('headerDescription')}
         </p>
-        <div className="mt-10 flex justify-center gap-x-6">
+        <div className="mt-10 flex flsex-col ssm:flex-row justify-center gap-2 sm:gap-6">
           <Button2 variant={'invert'} to={'/contact'} className="group">
             {startCase(t('getInTouch'))}
           </Button2>

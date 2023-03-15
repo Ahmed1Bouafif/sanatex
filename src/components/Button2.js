@@ -11,7 +11,7 @@ export const Button2 = ({
   return (
     <button disabled={disabled} className={`relative ${className}`}>
       <Link
-        className={`w-[200px] block py-3 px-6  leading-10 text-base no-underline   tracking-[2px] text-center relative transition-all duration-[0.35s] border-2 border-solid   after:absolute after:content-[''] after:w-0 after:h-full after:transition-all after:duration-[0.35s] after:left-0 after:top-0 group hover:after:w-full  ${
+        className={`w-[200px] block py-4 px-4 sm:py-3 sm:px-6  leading-10 text-sm sm:text-base no-underline   tracking-[2px] text-center relative transition-all duration-[0.35s] border-2 border-solid   after:absolute after:content-[''] after:w-0 after:h-full after:transition-all after:duration-[0.35s] after:left-0 after:top-0 group hover:after:w-full  ${
           variant === 'primary'
             ? 'text-black border-black after:bg-black'
             : variant === 'secondary'

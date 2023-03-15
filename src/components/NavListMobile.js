@@ -4,7 +4,7 @@ import { navLinks } from '../data/nav-links';
 import { motion } from 'framer-motion';
 import { capitalize } from 'lodash';
 import { useTranslation } from 'react-i18next';
-import { useNavContext } from '../context/store';
+import { useFormTabContext, useNavContext } from '../context/store';
 const menuQuery = graphql`
   query MenuQuery {
     site {
@@ -19,6 +19,7 @@ const menuQuery = graphql`
 `;
 export const NavListMobile = () => {
   const { menu } = useStaticQuery(menuQuery).site.siteMetadata;
+  const { setActiveFormTab } = useFormTabContext();
   const { setExpandNav } = useNavContext();
   const { t } = useTranslation();
   return (
@@ -29,7 +30,14 @@ export const NavListMobile = () => {
     >
       {menu.map(({ label, slug }) => (
         <Link
-          onClick={(e) => setExpandNav(false)}
+          onClick={(e) => {
+            if (label === 'open positions') {
+              setActiveFormTab(1);
+            } else {
+              setActiveFormTab(0);
+            }
+            setExpandNav(false);
+          }}
           key={label}
           to={slug}
           className="block w-full p-2"
