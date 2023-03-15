@@ -42,6 +42,9 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#811dec",endColorstr="#5596ff",GradientType=1);
 }
+.service-card.active {
+  background-color: black !important;
+}
 
 .form__group {
   position: relative;
@@ -145,4 +148,8 @@ select {
   -webkit-appearance: none;
   text-indent: 1px;
   text-overflow: '';
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
 }

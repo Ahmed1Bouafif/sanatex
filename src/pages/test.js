@@ -1,10 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import { Test } from '../components/Test';
 
 export default function test() {
-  return (
-    <Layout>
-      <div>test</div>
-    </Layout>
-  );
+  return <Layout>{/* <Test /> */}</Layout>;
 }
