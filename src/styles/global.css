@@ -42,9 +42,6 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#811dec",endColorstr="#5596ff",GradientType=1);
 }
-.service-card.active {
-  background-color: black !important;
-}
 
 .form__group {
   position: relative;

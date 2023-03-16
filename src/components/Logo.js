@@ -7,7 +7,7 @@ export const Logo = () => {
       to="/"
       aria-label="Go home"
       title="Company"
-      className="bg-rsed-500 md:max-w-[200px] lg:max-w-[300px] max-w-[200px] min-w-[150px]"
+      className="bg-rsed-500 md:max-w-[200px] lg:max-w-[250px] max-w-[200px] min-w-[150px]"
     >
       <div className="bg-bluse-500">
         <img src="/logo.png" alt="" className="bg-grseen-500" />

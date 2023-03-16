@@ -32,17 +32,6 @@ export const Services = () => {
   return (
     <Section title="services">
       <div className="flex flex-col">
-        {/* {services.map((service, idx) => (
-            <motion.div
-              key={service.title}
-              className="lmin-g:h-[270px] self-stretch felx "
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.2, delay: idx / 20 }}
-            >
-              <ServiceCard {...service} setActiveService={setActiveService} activeService={activeService}/>
-            </motion.div>
-          ))} */}
         <div className="md:hidden flex flex-col">
           {services.map((service, idx) => (
             <motion.div

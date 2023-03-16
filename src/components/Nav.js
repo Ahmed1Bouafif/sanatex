@@ -60,7 +60,7 @@ export const Nav = () => {
           <>
             <div
               onClick={(e) => setExpandNav(false)}
-              className="fixed inset-0 bg-slate-300/50 opacity-100 md:hidden"
+              className="fixed inset-0 bg-slate-300/50 opacity-100 mdsm:hidden"
             ></div>
             <NavListMobile />
           </>
