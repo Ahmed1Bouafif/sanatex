@@ -1,15 +1,10 @@
 import { capitalize } from 'lodash';
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, ValidationError } from '@formspree/react';
 import { Button2 } from './Button2';
 import FormInput from './FormInput';
+import { ContactForm } from './ContactForm';
 const openPosInputs = [
-  // {
-  //   label: 'gender (Mr/Mrs)',
-  //   name: 'gender',
-  //   type: 'select',
-  //   required: false,
-  // },
   {
     label: 'Name',
     name: 'name',
@@ -28,123 +23,76 @@ const openPosInputs = [
     type: 'text',
     required: false,
   },
-  // {
-  //   label: 'CV',
-  //   name: 'cv',
-  //   type: 'file',
-  //   required: true,
-  // },
-  // {
-  //   label: 'cover letter',
-  //   name: 'cl',
-  //   type: 'file',
-  //   required: true,
-  // },
-  // {
-  //   label: 'Message',
-  //   name: 'message',
-  //   type: 'textarea',
-  //   required: false,
-  // },
 ];
 export const OpenPosForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
+  const [state, handleSubmit] = useForm('mbjekejv');
 
-  const submitForm = (formValues) => {
-    console.log(formValues);
-    reset();
-  };
-
+  if (state.succeeded) {
+    // navigate('/submitted');
+    console.log('Submitted Open positions.');
+    alert('Open positions form submitted.');
+  }
   return (
-    <form
-      onSubmit={handleSubmit(submitForm)}
-      className="flex flex-col bg-grseen-500  gap-4"
-    >
-      <div className="flex flex-col gap-2  bg-rsed-300 items-center">
-        <div className="form__group field font-heading">
-          <select
-            className="form__field"
-            {...register('gender')}
-            id="gender"
-            // defaultValue={'default'}
-          >
-            {/* <option hidden disabled value="default"></option> */}
-            <option value="mr">Mr.</option>
-            <option value="mrs">Mrs.</option>
-          </select>
-          <label className="form__label font-heading" htmlFor="gender">
-            gender (Mr/Mrs)
-          </label>
-        </div>
-        {openPosInputs.map(({ name, ey, type, label, required }, idx) => (
-          <div key={name} className="form__group field font-heading">
-            <input
-              id={name}
-              className={`form__field`}
-              type={type}
-              placeholder={label}
-              required={required}
-              {...register(name)}
-            />
-            <label htmlFor={name} className={`form__label font-heading `}>
-              {required ? capitalize(`${label}*`) : capitalize(label)}
-            </label>
-          </div>
-        ))}
-        <div
-          className="form__group field font-heading border-b-2 border-[#9b9b9b] "
-          style={{
-            paddingTop: '30px',
-            marginTop: '20px',
-          }}
-        >
+    <ContactForm state={state} handleSubmit={handleSubmit}>
+      <div className="form__group field font-heading">
+        <select className="form__field" name="gender" id="gender">
+          <option value="mr">Mr.</option>
+          <option value="mrs">Mrs.</option>
+        </select>
+        <label className="form__label font-heading" htmlFor="gender">
+          gender (Mr/Mrs)
+        </label>
+        <ValidationError prefix="Gender" field="gender" errors={state.errors} />
+      </div>
+      {openPosInputs.map(({ name, type, label, required }, idx) => (
+        <div key={name} className="form__group field font-heading">
           <input
-            {...register('cv')}
-            id="cv"
-            type="file"
-            className="hidden"
-            accept=".xlsx,.xls,.doc, .docx,.ppt, .pptx,.txt,.pdf"
+            id={name}
+            name={name}
+            className={`form__field`}
+            type={type}
+            placeholder={label}
+            required={required}
           />
-          <label
-            className="form__label font-heading bg-rsed-500 w-full cursor-pointer"
-            htmlFor="cv"
-          >
-            CV*
+          <label htmlFor={name} className={`form__label font-heading `}>
+            {required ? capitalize(`${label}*`) : capitalize(label)}
           </label>
+          <ValidationError prefix={label} field={name} errors={state.errors} />
         </div>
-        <div className="form__group field font-heading">
-          <textarea
-            {...register('message')}
-            id="message"
-            placeholder="Message"
-            className="form__field text-white resize-none scrollbar-hide"
-          ></textarea>
-          <label className="form__label font-heading" htmlFor="message">
-            Message
-          </label>
-        </div>
-      </div>
-      <div className="flex justify-start">
-        <Button2
-          // disabled={state.submitting}
-          variant={'secondary'}
-          to={'#'}
-          className="w-full"
+      ))}
+      <div
+        className="form__group field font-heading border-b-2 border-[#9b9b9b] "
+        style={{
+          paddingTop: '30px',
+          marginTop: '20px',
+        }}
+      >
+        <input
+          name="cv"
+          id="cv"
+          type="file"
+          className="hidden"
+          accept=".xlsx,.xls,.doc, .docx,.ppt, .pptx,.txt,.pdf"
+        />
+        <label
+          className="form__label font-heading bg-rsed-500 w-full cursor-pointer"
+          htmlFor="cv"
         >
-          SUBMIT
-        </Button2>
-        {/* <button
-          type="submit"
-          className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading w-full"
-        >
-          Submit
-        </button> */}
+          CV*
+        </label>
+        <ValidationError prefix="CV" field="cv" errors={state.errors} />
       </div>
-    </form>
+      <div className="form__group field font-heading">
+        <textarea
+          id="message"
+          placeholder="Message"
+          name="message"
+          className="form__field text-white resize-none scrollbar-hide"
+        ></textarea>
+        <label className="form__label font-heading" htmlFor="message">
+          Message
+        </label>
+      </div>
+    </ContactForm>
   );
 };

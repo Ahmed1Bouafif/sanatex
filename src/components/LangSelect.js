@@ -22,8 +22,8 @@ export const LangSelect = () => {
     useStaticQuery(langQuery).site.siteMetadata.languages;
 
   const [lang, setLang] = useState(defaultLangKey);
-  const { language, changeLanguage } = useI18next();
-  const { t, i18n } = useTranslation();
+  // const { language, changeLanguage } = useI18next();
+  // const { t, i18n } = useTranslation();
   const handleChangeLanguage = (lang) => {
     i18next.changeLanguage(lang);
     // this changes url : /de/contact

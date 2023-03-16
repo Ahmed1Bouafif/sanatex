@@ -3,6 +3,7 @@ import { capitalize } from 'lodash';
 import React, { useEffect } from 'react';
 import { navigate } from 'gatsby';
 import { Button2 } from './Button2';
+import { ContactForm } from './ContactForm';
 const writeUsInputs = [
   {
     label: 'First name',
@@ -45,74 +46,45 @@ const writeUsInputs = [
 export const WriteUsForm = () => {
   const [state, handleSubmit] = useForm('xwkjqwjg');
 
-  const submitForm = (formValues) => {
-    console.log(formValues);
-    // reset();
-  };
-
   if (state.succeeded) {
-    navigate('/submitted');
+    // navigate('/submitted');
+    console.log('Submitted Write us.');
+    alert('Contact form submitted.');
   }
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col bg-grseen-500  gap-4"
-    >
-      <div className="flex flex-col gap-2  bg-rsed-300 items-center">
-        {writeUsInputs.map(({ name, ey, type, label, required }, idx) => (
-          <div key={name} className="form__group field font-heading">
-            <input
-              id={name}
-              name={name}
-              className={`form__field`}
-              type={type}
-              placeholder={label}
-              required={required}
-            />
-            <label htmlFor={name} className={`form__label font-heading `}>
-              {required ? capitalize(`${label}*`) : capitalize(label)}
-            </label>
-            <ValidationError
-              prefix={label}
-              field={name}
-              errors={state.errors}
-            />
-          </div>
-        ))}
-        <div className="form__group field font-heading">
-          <textarea
-            id="message"
-            placeholder="Message"
-            name="message"
-            className="form__field text-white resize-none scrollbar-hide"
-          ></textarea>
-          <label className="form__label font-heading" htmlFor="message">
-            Message
-          </label>
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
+    <ContactForm state={state} handleSubmit={handleSubmit}>
+      {writeUsInputs.map(({ name, type, label, required }, idx) => (
+        <div key={name} className="form__group field font-heading">
+          <input
+            id={name}
+            name={name}
+            className={`form__field`}
+            type={type}
+            placeholder={label}
+            required={required}
           />
+          <label htmlFor={name} className={`form__label font-heading `}>
+            {required ? capitalize(`${label}*`) : capitalize(label)}
+          </label>
+          <ValidationError prefix={label} field={name} errors={state.errors} />
         </div>
+      ))}
+      <div className="form__group field font-heading">
+        <textarea
+          id="message"
+          placeholder="Message"
+          name="message"
+          className="form__field text-white resize-none scrollbar-hide"
+        ></textarea>
+        <label className="form__label font-heading" htmlFor="message">
+          Message
+        </label>
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
       </div>
-      <div className="flex justify-center">
-        <Button2
-          disabled={state.submitting}
-          variant={'secondary'}
-          to={'#'}
-          className="w-full"
-        >
-          SUBMIT
-        </Button2>
-        {/* <button
-          disabled={state.submitting}
-          type="submit"
-          className="bg-white px-6 py-3 text-black font-semibold rounded-sm font-heading disabled:bg-white/50 transition-all w-full"
-        >
-          Submit
-        </button> */}
-      </div>
-    </form>
+    </ContactForm>
   );
 };

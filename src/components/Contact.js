@@ -10,7 +10,6 @@ import { useFormTabContext } from '../context/store';
 
 const Contact = () => {
   const forms = [WriteUsForm, OpenPosForm];
-  const [activeTab, setActiveTab] = useState(0);
   const { activeFormTab, setActiveFormTab } = useFormTabContext();
   const tabs = [
     {
