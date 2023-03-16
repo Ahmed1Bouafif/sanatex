@@ -47,7 +47,7 @@ export const ServiceCard = ({
         <div className="flex justify-center lg:justify-start z-10">
           <Icon
             className={`z-0 max-w-[100px] group-hover:stroke-white text-black transition-all ${
-              isActive ? 'text-hite' : ''
+              isActive ? 'text-white' : ''
             }`}
           />
         </div>
