@@ -1,16 +1,15 @@
-const languages = require('./languages');
+const languages = require("./languages")
 module.exports = {
-  siteUrl: 'https://sanatex.ch',
-  title: 'Sanatex',
-  description:
-    'Sanatex, your partner for planning, realisation and maintenance of wired telecommunication networks.',
-  copyright: 'This ebsite is copyright 2023 Sanatex',
+  siteUrl: "https://sanatex.ch",
+  title: "Sanatex",
+  description: "Sanatex, your partner for planning, realisation and maintenance of wired telecommunication networks.",
+  copyright: "This ebsite is copyright 2023 Sanatex",
   menu: [
-    { label: 'home', slug: '/' },
-    { label: 'about', slug: '/about/' },
-    { label: 'services', slug: '/services/' },
-    { label: 'open positions', slug: '/contact/' },
-    { label: 'contact', slug: '/contact/' },
+    { label: "Startseite", slug: "/" },
+    { label: "Über", slug: "/about/" },
+    { label: "Dienstleistungen", slug: "/services/" },
+    { label: "Offene Stellen", slug: "/contact/" },
+    { label: "Kontakt", slug: "/contact/" },
   ],
   languages,
-};
+}

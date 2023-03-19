@@ -1,26 +1,26 @@
 export const navLinks = [
   {
-    name: 'Home',
-    pathname: '/',
+    name: "Startseite",
+    pathname: "/",
   },
   {
-    name: 'About us',
-    pathname: '/about-us/',
+    name: "Über uns",
+    pathname: "/about-us/",
   },
   {
-    name: 'Sevices',
-    pathname: '/services/',
+    name: "Dienstleistungen",
+    pathname: "/services/",
   },
   {
-    name: 'References',
-    pathname: '/references/',
+    name: "Referenzen",
+    pathname: "/references/",
   },
   {
-    name: 'Open positions',
-    pathname: '/open-positions/',
+    name: "Offene Stellen",
+    pathname: "/open-positions/",
   },
   {
-    name: 'Contact',
-    pathname: '/contact/',
+    name: "Kontakt",
+    pathname: "/contact/",
   },
-];
+]

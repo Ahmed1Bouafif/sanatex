@@ -23,7 +23,7 @@ export const FooterCopyright = () => {
           <p className=" text-white ">
             Powered by{' '}
             <Link to="#" className="font-bold">
-              TROKIT
+              TROKKIITT
             </Link>
           </p>
         </div>

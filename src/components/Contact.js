@@ -13,10 +13,10 @@ const Contact = () => {
   const { activeFormTab, setActiveFormTab } = useFormTabContext();
   const tabs = [
     {
-      label: 'write us',
+      label: 'Schreiben Sie uns',
     },
     {
-      label: 'open positions',
+      label: 'offene Stellen',
     },
   ];
 
@@ -28,7 +28,7 @@ const Contact = () => {
       <Container className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2">
         <div className="bg-red-30s0 col-span-3 mb:4">
           <p className="text-white text-center text-5xl md:text-left md:text-7xl lg:text-8xl font-heading ">
-            Get in touch with us
+          Nehmen Sie Kontakt mit uns auf
           </p>
         </div>
         <div className="bg-gray-6s00 row-span-2 flex flex-col gap-1 col-span-2 md:px-16 h-[550px]">
@@ -53,14 +53,14 @@ const Contact = () => {
         <div className="bg-blue-30s0 col-span-3 mt-8 md:mt-0 flex items-center justify-center md:justify-start">
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 mt-10 md:mt-0">
             <div className="text-center md:text-left">
-              <p className="font-semibold tracking-wide text-white">Category</p>
+              <p className="font-semibold tracking-wide text-white">Kategorie</p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    News
+                    Nachrichten
                   </a>
                 </li>
                 <li>
@@ -68,7 +68,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    World
+                    Welt
                   </a>
                 </li>
                 <li>
@@ -76,7 +76,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Games
+                    Spiele
                   </a>
                 </li>
                 <li>
@@ -84,7 +84,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    References
+                    Referenzen
                   </a>
                 </li>
               </ul>
@@ -121,7 +121,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Entertainment
+                    Unterhaltung
                   </a>
                 </li>
                 <li>
@@ -135,14 +135,14 @@ const Contact = () => {
               </ul>
             </div>
             <div className="text-center md:text-left">
-              <p className="font-semibold tracking-wide text-white">Apples</p>
+              <p className="font-semibold tracking-wide text-white">Äpfel</p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Media
+                    Medien
                   </a>
                 </li>
                 <li>
@@ -150,7 +150,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Brochure
+                    Broschüre
                   </a>
                 </li>
                 <li>
@@ -158,7 +158,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Nonprofit
+                    Gemeinnützig
                   </a>
                 </li>
                 <li>
@@ -166,7 +166,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Educational
+                    Bildung
                   </a>
                 </li>
                 <li>
@@ -174,13 +174,13 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Projects
+                    Projekte
                   </a>
                 </li>
               </ul>
             </div>
             <div className="text-center md:text-left">
-              <p className="font-semibold tracking-wide text-white">Cherry</p>
+              <p className="font-semibold tracking-wide text-white">Kirsche</p>
               <ul className="mt-2 space-y-2">
                 <li>
                   <a
@@ -195,7 +195,7 @@ const Contact = () => {
                     href="/"
                     className="text-gray-400 transition-colors duration-300 hover:text-deep-purple-accent-400"
                   >
-                    Personal
+                    Persönlich
                   </a>
                 </li>
                 <li>

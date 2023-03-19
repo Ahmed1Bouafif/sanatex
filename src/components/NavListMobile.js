@@ -1,10 +1,10 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import React from 'react';
-import { navLinks } from '../data/nav-links';
-import { motion } from 'framer-motion';
-import { capitalize } from 'lodash';
-import { useTranslation } from 'react-i18next';
-import { useFormTabContext, useNavContext } from '../context/store';
+import { graphql, Link, useStaticQuery } from "gatsby"
+import React from "react"
+import { navLinks } from "../data/nav-links"
+import { motion } from "framer-motion"
+import { capitalize } from "lodash"
+import { useTranslation } from "react-i18next"
+import { useFormTabContext, useNavContext } from "../context/store"
 const menuQuery = graphql`
   query MenuQuery {
     site {
@@ -16,35 +16,32 @@ const menuQuery = graphql`
       }
     }
   }
-`;
+`
 export const NavListMobile = () => {
-  const { menu } = useStaticQuery(menuQuery).site.siteMetadata;
-  const { setActiveFormTab } = useFormTabContext();
-  const { setExpandNav } = useNavContext();
-  const { t } = useTranslation();
+  const { menu } = useStaticQuery(menuQuery).site.siteMetadata
+  const { setActiveFormTab } = useFormTabContext()
+  const { setExpandNav } = useNavContext()
+  const { t } = useTranslation()
   return (
-    <motion.div
-      className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 opacity-100 scale-100 mdsm:hidden"
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-    >
+    <motion.div className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 opacity-100 scale-100 mdsm:hidden" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }}>
       {menu.map(({ label, slug }) => (
         <Link
           onClick={(e) => {
-            if (label === 'open positions') {
-              setActiveFormTab(1);
+            if (label === "open positions") {
+              setActiveFormTab(1)
             } else {
-              setActiveFormTab(0);
+              setActiveFormTab(0)
             }
-            setExpandNav(false);
+            setExpandNav(false)
           }}
           key={label}
           to={slug}
           className="block w-full p-2"
         >
-          {capitalize(t(label))}
+          {/* {capitalize(t(label))} */}
+          {label}
         </Link>
       ))}
     </motion.div>
-  );
-};
+  )
+}
