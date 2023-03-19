@@ -10,7 +10,7 @@ export const Section = ({ children, bg = false, title }) => {
     <div
       className={`relative overflow-hidden ${
         bg ? 'bg-blue-600' : 'bg-white'
-      } pt-20 pb-28 sm:py-32 md:py-24 md:pbx-10 `}
+      } mt-32 psb-28 ssm:py-32 msd:py-24  `}
     >
       {/* <img
         src="/services1.svg"

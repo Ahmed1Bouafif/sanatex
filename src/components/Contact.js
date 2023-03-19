@@ -24,7 +24,7 @@ const Contact = () => {
     setActiveFormTab(idx);
   };
   return (
-    <div className="bg-black text-white  py-20 ">
+    <div className="bg-black text-white  py-20  mt-20">
       <Container className="grid grid-cols-1 md:grid-cols-5 md:grid-rows-2">
         <div className="bg-red-30s0 col-span-3 mb:4">
           <p className="text-white text-center text-5xl md:text-left md:text-7xl lg:text-8xl font-heading ">

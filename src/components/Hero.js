@@ -23,9 +23,9 @@ export const Hero = () => {
   const { siteMetadata } = useStaticQuery(siteInfo).site;
   // console.log(siteMetadata);
   return (
-    <div className="relative">
-      <Container className=" pt-20 pb-16 text-center  ">
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl ">
+    <div className="relative h-screen grid place-content-center">
+      <Container className=" my-auto text-center  ">
+        <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-white sm:text-7xl ">
           Be linked with{' '}
           <span className="relative whitespace-nowrap">
             <svg
@@ -40,14 +40,14 @@ export const Hero = () => {
           </span>{' '}
           services
         </h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+        <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-white/80">
           {t('headerDescription')}
         </p>
         <div className="mt-10 flex flsex-col ssm:flex-row justify-center gap-2 sm:gap-6">
-          <Button2 variant={'invert'} to={'/contact'} className="group">
+          <Button2 variant={'accent'} to={'/contact'} className="group">
             {startCase(t('getInTouch'))}
           </Button2>
-          <Button2 variant={'accent'} to={'#'} className="group">
+          {/* <Button2 variant={'accent'} to={'#'} className="group">
             <svg
               aria-hidden="true"
               className={`h-3 w-3 flex-none group-hover:fill-white transition-all fill-black group-active:fill-current`}
@@ -57,44 +57,17 @@ export const Hero = () => {
             <span className="group-hover:text-white transition ml-3">
               Watch Video
             </span>
-          </Button2>
-          {/* 
-          <Button variant="tertiary">
-            <svg
-              aria-hidden="true"
-              className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
-            >
-              <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"></path>
-            </svg>
-            <span className="ml-3">Watch video</span>
-          </Button> */}
+          </Button2> */}
         </div>
-
-        {/* <div className="mt-36 lg:mt-44">
-          <h3 className="font-display text-base text-slate-900">
-            Trusted by these six companies so far
-          </h3>
-          <ul
-            role="list"
-            className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
-          >
-            <li>
-              <ul className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
-                <TrustedByItem />
-                <TrustedByItem />
-                <TrustedByItem />
-              </ul>
-            </li>
-            <li>
-              <ul className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
-                <TrustedByItem />
-                <TrustedByItem />
-                <TrustedByItem />
-              </ul>
-            </li>
-          </ul>
-        </div> */}
       </Container>
+
+      <div className="absolute top-0 left-0 z-[-999] w-full h-full">
+        <img
+          src="/hero.jpeg"
+          className="absolute top-0 left-0  object-cover h-full w-full "
+        />
+        <div className="absolute top-0 left-0 h-full w-full bg-black/50"></div>
+      </div>
     </div>
   );
 };
