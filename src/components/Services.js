@@ -86,7 +86,8 @@ export const Services = () => {
           <div className="flex justify-center">
             {services.slice(0, 4).map((service) => (
               <motion.div key={service.title} className="h-[250px] flex-1" initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.2, delay: service.idx / 20 }}>
-                <ServiceCard {...service} setActiveService={setActiveService} setPrev={setPrev} activeService={activeService} />
+                <ServiceCard {...service}  />
+                {/* setActiveService={setActiveService} setPrev={setPrev} activeService={activeService} */}
               </motion.div>
             ))}
           </div>

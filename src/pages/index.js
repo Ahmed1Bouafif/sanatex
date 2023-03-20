@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { AboutUs } from '../components/AboutUs';
-import { Hero } from '../components/Hero';
-import Layout from '../components/Layout';
-import { Services } from '../components/Services';
-import '../../i18n';
-import { Button } from '../components/Button';
-import Container from '../components/Container';
-import { TrustedBy } from '../components/TrustedBy';
-import Contact from '../components/Contact';
-import { SEO } from '../components/SEO';
+import * as React from "react"
+import { AboutUs } from "../components/AboutUs"
+import { Hero } from "../components/Hero"
+import Layout from "../components/Layout"
+import { Services } from "../components/Services"
+import "../../i18n"
+import { Button } from "../components/Button"
+import Container from "../components/Container"
+import { TrustedBy } from "../components/TrustedBy"
+import Contact from "../components/Contact"
+import { SEO } from "../components/SEO"
 // import { useLocation } from "react-router-dom"
 // import {i18next} from "i18next"
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
 
       <AboutUs />
       <Services />
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </Container> */}
     </Layout>
-  );
+  )
 }
 
 // export const query = graphql`

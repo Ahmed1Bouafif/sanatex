@@ -1,76 +1,65 @@
-import {
-  ClipboardDocumentCheckIcon,
-  RectangleStackIcon,
-  PresentationChartLineIcon,
-  HomeIcon,
-  WrenchScrewdriverIcon,
-  SignalIcon,
-  ServerIcon,
-  LinkIcon,
-} from '@heroicons/react/24/outline';
 export const services = [
   {
     idx: 1,
-    name: 'acquisition',
-    title: 'Acquisition',
-    icon: ClipboardDocumentCheckIcon,
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    name: "FIBER TO THE HOME",
+    title: "FIBER TO THE HOME",
+    icon: "FTTS.png",
+    description: "«Fiber to the Home» steht für schnelles Surfen und gleichzeitig Fernsehen in Full-HD sowie Telefonieren in höchster Sprachqualität.",
   },
   {
     idx: 2,
-    name: 'planningAndDesign',
-    title: 'Planning and design',
-    icon: RectangleStackIcon,
-    description:
-      " If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+    name: "FIBER TO THE BUILDING",
+    title: "FIBER TO THE BUILDING",
+    icon: "/FTTB.png",
+    description: "«Fiber to the Building» bezeichnet das Verlegen von Glasfaserkabeln bis in das Gebäude.",
   },
   {
     idx: 3,
-    name: 'networkConstruction',
-    title: 'Network construction',
-    icon: SignalIcon,
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    name: "FIBER TO THE STREET",
+    title: "FIBER TO THE STREET",
+    icon:  "/FTTH.png",
+    description: "«Fiber to the Street» bezeichnet das Verglegen von Glasfaserkabeln bis kurz vor das Gebäude.",
   },
   {
     idx: 4,
-    name: 'cablePull',
-    title: 'Cable pull',
-    icon: LinkIcon,
-    description:
-      " If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+    name: "UMSA / Daily Business",
+    title: "UMSA / Daily Business",
+    icon: "traktourrrr.png",
+    description: "Verlegung und Einzug von Erdkabeln für Lichtwellenleiter- und Breitbandausbau. ",
   },
   {
     idx: 5,
-    name: 'connectionTechnology',
-    title: 'Connection technology',
-    icon: ServerIcon,
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    name: "TIEFBAU-KABELZUG",
+    title: "TIEFBAU-KABELZUG",
+    icon: "traktourrrr.png",
+    description: "Verlegung und Einzug von Erdkabeln für Lichtwellenleiter- und Breitbandausbau. ",
   },
   {
     idx: 6,
-    name: 'measurementTechnology',
-    title: 'Measurement technology',
-    icon: PresentationChartLineIcon,
-    description:
-      " If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+    name: "RUNDUM-SERVICE",
+    title: "RUNDUM-SERVICE",
+    icon:  "rundom.jpg",
+    description: "Sanatex ist auf den Ausbau von Glasfasernetz spezialisiert, übernimmt jedoch den Ausbau von Elektro- und Kommunikations-Installationen aller Art . sowie die Netzdokumentation und bietet Dienstleistungen im Bereich Tiefbau/Kabelzug, Kupfer, Engineering, Fiber to the Street (FTTS), Fiber to the Building (FTTB), Fiber to the Home (FTTH) und Neubauten an und kann somit das komplette Spektrum abdecken. Selbstverständlich gehört auch Wartung und die Behebung von Störungen zu unseren Dienstleistungen. Dank diesem breitgefächerten Angebot ist es Sanatex möglich, ein ganzes Netz mit eigenen Ressourcen auszubauen.",
   },
   {
     idx: 7,
-    name: 'inHouseInstallations',
-    title: 'In-house installations',
-    icon: HomeIcon,
-    description:
-      "simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    name: "KUPFER",
+    title: "KUPFER",
+    icon:  "/circle.png",
+    description: " Kombination aus FTTS/FTTB und Kupfer.",
   },
   {
     idx: 8,
-    name: 'operationAndMaintenance',
-    title: 'Operation & Maintenance',
-    icon: WrenchScrewdriverIcon,
-    description:
-      " If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+    name: "UNIVERSELLE GEBÄUDEVERKABELUNG",
+    title: "UNIVERSELLE GEBÄUDEVERKABELUNG",
+    icon:  "/cable.png",
+    description: "UKV: Durchdachte Infrastruktur bis zum Endgerät. ",
   },
-];
+  // {
+  //   idx: 8,
+  //   name: "operationAndMaintenance",
+  //   title: "Operation & Maintenance",
+  //   icon: WrenchScrewdriverIcon,
+  //   description: " If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+  // },
+]

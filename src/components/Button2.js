@@ -14,7 +14,7 @@ export const Button2 = ({
       : variant === 'secondary'
       ? 'text-white border-white after:bg-white'
       : variant === 'accent'
-      ? 'text-black hover:border-blue-600 after:bg-blue-600'
+      ? 'text-white hover:border-blue-600 after:bg-blue-600'
       : variant === 'invert'
       ? 'text-white bg-black border-black after:bg-white'
       : ''
@@ -31,7 +31,7 @@ export const Button2 = ({
                 ? 'group-hover:text-black text-white'
                 : variant === 'invert'
                 ? 'group-hover:text-black text-white'
-                : ''
+                : 'text-white'
             }`}
           >
             {children}

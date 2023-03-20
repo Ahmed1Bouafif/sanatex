@@ -7,7 +7,7 @@ import { capitalize } from "lodash"
 export const Section = ({ children, bg = false, title }) => {
   const { t } = useTranslation()
   return (
-    <div className={`relative overflow-hidden ${bg ? "bg-blue-600" : "bg-white"} pt-20 pb-28 sm:py-32 md:py-24 md:pbx-10 `}>
+    <div className={`relative overflow-hidden  mt-32 psb-28 ssm:py-32 msd:py-24  `}>
       {/* <img
         src="/services1.svg"
         className="object-cover absolute top-0 left-0 w-full h-full"
