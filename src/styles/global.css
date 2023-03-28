@@ -150,3 +150,7 @@ select {
 .ReactCollapse--collapse {
   transition: height 500ms;
 }
+
+.dark body {
+  background: #191a1c;
+}
