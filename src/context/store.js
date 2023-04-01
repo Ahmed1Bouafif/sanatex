@@ -1,31 +1,36 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState, useLayoutEffect } from "react"
 
-const StoreContext = createContext({});
+const StoreContext = createContext({})
 
 export const StoreProvider = ({ children }) => {
-  const [expandNav, setExpandNav] = useState(false);
-  const [activeFormTab, setActiveFormTab] = useState(0);
-  const [theme, setTheme] = useState(null);
+  const [expandNav, setExpandNav] = useState(false)
+  const [activeFormTab, setActiveFormTab] = useState(0)
+  const [theme, setTheme] = useState(null)
+
+  useLayoutEffect(() => {
+    // || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    if (localStorage.theme === "dark") {
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }, [])
+
+  useEffect(() => {})
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark")
     } else {
-      setTheme('light');
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
     }
-  }, []);
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [theme]);
+  }, [theme])
 
   const switchTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
-  };
+    setTheme((curr) => (curr === "light" ? "dark" : "light"))
+  }
 
   return (
     <StoreContext.Provider
@@ -41,20 +46,20 @@ export const StoreProvider = ({ children }) => {
     >
       {children}
     </StoreContext.Provider>
-  );
-};
+  )
+}
 
 export const useNavContext = () => {
-  const { expandNav, setExpandNav } = useContext(StoreContext);
-  return { expandNav, setExpandNav };
-};
+  const { expandNav, setExpandNav } = useContext(StoreContext)
+  return { expandNav, setExpandNav }
+}
 
 export const useFormTabContext = () => {
-  const { activeFormTab, setActiveFormTab } = useContext(StoreContext);
-  return { activeFormTab, setActiveFormTab };
-};
+  const { activeFormTab, setActiveFormTab } = useContext(StoreContext)
+  return { activeFormTab, setActiveFormTab }
+}
 
 export const useThemeContext = () => {
-  const { theme, setTheme, switchTheme } = useContext(StoreContext);
-  return { theme, setTheme, switchTheme };
-};
+  const { theme, setTheme, switchTheme } = useContext(StoreContext)
+  return { theme, setTheme, switchTheme }
+}
