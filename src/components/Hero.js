@@ -24,7 +24,7 @@ export const Hero = () => {
   return (
     <div className="relative h-screen grid place-content-center">
       <Container className=" flex flex-col justfity-center  my-auto text-center  ">
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-black sm:text-8xl ">
+        <h1 className="mx-auto max-w-4xl font-display text-5xl font-big font-medium tracking-tight text-black sm:text-8xl ">
           Verbunden sein mit{" "}
           <span className="relative whitespace-nowrap">
             <svg aria-hidden="true" viewBox="0 0 418 42" className="absolute top-2/3 left-0 h-[0.58em] w-full fill-[#1fbcf8]" preserveAspectRatio="none">
@@ -41,11 +41,11 @@ export const Hero = () => {
       className="bg-rsed-500 mx-auto   md:max-w-[200px] lg:max-w-[250px] max-w-[200px] min-w-[150px]"
     >
       {/* <div className="bg-bluse-500"> */}
-        <img src="/logo01.png" alt="" />
+        <img src="/213.png" alt="" />
       {/* </div> */}
     </Link>
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight font-bold text-black ">
-            Sanatex, die neuste Generation von schneller und intelligenter Technologie. Wir bringen Sie auf das höchste Level.
+            Sanatex, die neuste Generation von schneller und intelligenter Technologie. Wir bringen Sie auf das nächste Level.
         </p>
         <div className="mt-10 flex flsex-col ssm:flex-row justify-center gap-2  sm:gap-6">
           <Button2 variant={"invert"} to={"/contact"} className="group">

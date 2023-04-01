@@ -12,13 +12,13 @@ const openPosInputs = [
     required: true,
   },
   {
-    label: "email",
+    label: "E-Mail",
     name: "email",
     type: "email",
     required: true,
   },
   {
-    label: "Phone",
+    label: "Telefon",
     name: "phone",
     type: "text",
     required: false,

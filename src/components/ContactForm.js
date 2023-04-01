@@ -17,7 +17,7 @@ export const ContactForm = ({ children, state, handleSubmit }) => {
           variant={'secondary'}
           className="w-full"
         >
-          SUBMIT
+          EINREICHEN
         </Button2>
       </div>
     </form>

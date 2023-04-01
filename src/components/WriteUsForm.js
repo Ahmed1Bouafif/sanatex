@@ -6,37 +6,37 @@ import { Button2 } from './Button2';
 import { ContactForm } from './ContactForm';
 const writeUsInputs = [
   {
-    label: 'First name',
+    label: 'Vorname',
     name: 'firstName',
     type: 'text',
     required: true,
   },
   {
-    label: 'Last name',
+    label: 'Nachname',
     name: 'lastName',
     type: 'text',
     required: true,
   },
   {
-    label: 'email',
+    label: 'E-mail',
     name: 'email',
     type: 'email',
     required: true,
   },
   {
-    label: 'Phone',
+    label: 'Telefon',
     name: 'phone',
     type: 'text',
     required: false,
   },
   {
-    label: 'City',
+    label: 'Stadt',
     name: 'city',
     type: 'text',
     required: false,
   },
   {
-    label: 'Street',
+    label: 'Straße',
     name: 'street',
     type: 'text',
     required: false,
