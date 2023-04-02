@@ -8,8 +8,10 @@ export const StoreProvider = ({ children }) => {
   const [theme, setTheme] = useState(null)
 
   useLayoutEffect(() => {
+    const deviseTime = new Date().getHours()
     // || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    if (localStorage.theme === "dark") {
+    // console.log("===>", deviseTime)
+    if (localStorage.theme === "dark" || (deviseTime < 6 || deviseTime >= 18)) {
       setTheme("dark")
     } else {
       setTheme("light")
