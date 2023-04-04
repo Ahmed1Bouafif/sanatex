@@ -6,7 +6,8 @@ const MapContainer = (props) => {
     width: '100%',
     height: '400px',
   };
-  const companyLocation = { lat: 47.43023369577387, lng: 8.542717511541522 };
+
+  const companyLocation = { lat: 47.39598756385111, lng: 8.422641053966395 };
 
   return (
     <Map
