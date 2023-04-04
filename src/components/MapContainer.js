@@ -8,6 +8,7 @@ const MapContainer = (props) => {
   };
   const companyLocation = { lat: 47.43023369577387, lng: 8.542717511541522 };
 
+  console.log(process.env.GATSBY_GOOGLE_API_KEY);
   return (
     <Map
       google={props.google}
@@ -21,5 +22,5 @@ const MapContainer = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyBIZDhtOmkftePyz2cXp5NQcGyWPQZbbSw',
+  apiKey: '',
 })(MapContainer);

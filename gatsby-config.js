@@ -1,4 +1,8 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 const siteMetadata = require('./src/data/siteMetaData');
+
 /**
  * Configure your Gatsby site with this file.
  *
