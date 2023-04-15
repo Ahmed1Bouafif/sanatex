@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { capitalize } from 'lodash';
 import { Collapse } from 'react-collapse';
+import { useThemeContext } from '../context/store';
 
 export const ServiceCard = ({
   name,
@@ -17,22 +18,23 @@ export const ServiceCard = ({
 }) => {
   const { t } = useTranslation();
   const isActive = activeService && idx === activeService;
+  const { theme, setTheme } = useThemeContext();
 
   useEffect(() => {
-    if (isActive) console.log(idx, 'is active');
+    // if (isActive) console.log(idx, 'is active');
   }, [activeService]);
   return (
     <>
       <motion.div
-        // onClick={(e) => {
-        //   console.log(idx, activeService)
-        //   setActiveService((id) => {
-        //     if (id) {
-        //       setPrev(id)
-        //     }
-        //     return id === idx ? null : idx
-        //   })
-        // }}
+        onClick={(e) => {
+          console.log(idx, activeService);
+          setActiveService((id) => {
+            if (id) {
+              setPrev(id);
+            }
+            return id === idx ? null : idx;
+          });
+        }}
         className="relative  flex flex-col z-10 p-10 lsg:p-8 md:p-8 gap-6 hover: transition-all roundsed-[4px] overflow-hidden group cursor-pointer gsap-10 lg:justify-between h-full min-w-[240px] "
       >
         <div
@@ -40,7 +42,7 @@ export const ServiceCard = ({
         ></div>
         {isActive && (
           <div
-            className={` absolute h-full w-full top-0 left-0 bg-black z-0 transition-all}`}
+            className={` absolute h-full w-full top-0 left-0 bg-black dark:bg-white z-0 transition-all}`}
           ></div>
         )}
 
@@ -50,8 +52,8 @@ export const ServiceCard = ({
         {/* </div>  */}
         <div className="flex flex-col justify-center my-auto gap-5  sm:gap-2 z-10 font-semibold ">
           <h3
-            className={`text-center mx-auto text-xl sm:text-lg group-hover:text-white text-black ${
-              isActive ? 'text-white' : ''
+            className={`text-center mx-auto text-xl sm:text-lg  dark:group-hover:text-black  group-hover:text-white text-black ${
+              isActive ? 'text-white dark:text-black' : ''
             } dark:text-white`}
           >
             {/* {capitalize(t(name))} */}
@@ -68,7 +70,9 @@ export const ServiceCard = ({
       </motion.div>
 
       <Collapse isOpened={isActive}>
-        <div className={`bg-black text-white p-8 font-heading sm:hidden`}>
+        <div
+          className={`bg-black dark:bg-white dark:text-black text-white p-8 font-heading sm:hidden`}
+        >
           {description}
         </div>
       </Collapse>
