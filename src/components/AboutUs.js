@@ -17,6 +17,7 @@ export const AboutUs = () => {
         className="opacity-20 z-0 left-0 top-0 absolute h-full object-center object-cover w-full"
         src="/banner1.png"
       /> */}
+      {/* hfgjhfjhf */}
       <Container className={"flex flex-col gap-16"}>
         <motion.h2 initial={{ x: -200, opacity: 0 }} whileInView={{ x: 1, opacity: 1 }} transition={{ duration: 0.5 }} className={`z-10 text-center md:text-left font-display text-4xl tracking-tight sm:text-5xl md:text-5xl text-white`}>
           {/* {capitalize(t("about"))} */} Über uns
