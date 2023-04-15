@@ -39,7 +39,7 @@ export const Footer = () => {
             >
               <div className="bg-bluse-500 bg-black p-4 rounded-[4px]">
                 <img
-                  src="/logo.png"
+                  src="/3131.png"
                   alt=""
                   className="bg-grseen-500 w-screen"
                 />

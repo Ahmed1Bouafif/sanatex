@@ -23,7 +23,7 @@ export const Hero = () => {
   // console.log(siteMetadata);
   return (
     <div className="relative h-screen grid place-content-center">
-      <Container className=" flex flex-col justfity-center  my-auto text-center  ">
+      <Container className=" flex flex-col justfity-center items-stretch my-auto text-center  ">
         {/* <h1 className="mx-auto max-w-4xl font-display text-5xl font-big font-medium tracking-tight text-black sm:text-8xl ">
           Verbunden sein mit{" "} */}
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-big font-medium tracking-tight text-black sm:text-8xl dark:text-white transition-all">
@@ -41,49 +41,21 @@ export const Hero = () => {
           {/* Dienstleistungen */}
         </h1>
         <Link
-// <<<<<<< HEAD
-      to="/"
-      aria-label="Go home"
-      title="Company"
-      className="bg-rsed-500 mx-auto   md:max-w-[200px] lg:max-w-[250px] max-w-[200px] min-w-[150px]"
-    >
-      {/* <div className="bg-bluse-500"> */}
-        <img src="/213.png" alt="" />
-      {/* </div> */}
-    {/* </Link> */}
-        {/* <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight font-bold text-black ">
-            Sanatex, die neuste Generation von schneller und intelligenter Technologie. Wir bringen Sie auf das nächste Level.
-=======
           to="/"
           aria-label="Go home"
           title="Company"
-          className="bg-rsed-500 mx-auto   md:max-w-[200px] lg:max-w-[250px] max-w-[200px] min-w-[150px]"
-        > */}
-          {/* <div className="bg-bluse-500"> */}
-          {/* <img src="/logo01.png" alt="" /> */}
-          {/* </div> */}
+          className="bg-rsed-500 mx-auto mt-4   md:msax-w-[200px] lg:mdax-w-[250px] msax-w-[200px] msin-w-[150px] bg-resd-500  w-3/4"
+        >
+          <img src="/3131.png" alt="" className="w-full" />
         </Link>
         <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight font-bold text-black dark:text-white/80 transition-all">
           Sanatex, die neuste Generation von schneller und intelligenter
           Technologie. Wir bringen Sie auf das nächste Level.
-{/* >>>>>>> 37c3794551a5ecbeae856719c84c8dcc2c92d6d5 */}
         </p>
         <div className="mt-10 flex flsex-col ssm:flex-row justify-center gap-2  sm:gap-6">
           <Button2 variant={'invert'} to={'/contact'} className="group">
             Kontaktieren Sie uns
-            {/* {startCase(t("getInTouch"))} */}
           </Button2>
-          {/* <Button2 variant={'accent'} to={'#'} className="group">
-            <svg
-              aria-hidden="true"
-              className={`h-3 w-3 flex-none group-hover:fill-white transition-all fill-black group-active:fill-current`}
-            >
-              <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"></path>
-            </svg>
-            <span className="group-hover:text-black transition ml-3">
-              Watch Video
-            </span>
-          </Button2> */}
         </div>
       </Container>
 
