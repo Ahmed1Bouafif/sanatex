@@ -191,7 +191,7 @@ export const Services = () => {
           </Collapse>
 
           <div className="flex justify-center">
-            {services.slice(4).map((service) => (
+            {services.slice(3).map((service) => (
               <motion.div
                 key={service.title}
                 className="h-[250px] flex-1"
