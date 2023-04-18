@@ -1,6 +1,6 @@
 const languages = require('./languages');
 module.exports = {
-  siteUrl: 'https://sanatex.ch',
+  siteUrl: 'https://sana-tex.ch',
   title: 'Sanatex',
   description:
     'Sanatex GmbH – die neuste Generation von schneller und intelligenter Technologie. Wir bringen Sie auf das höchste Level.',

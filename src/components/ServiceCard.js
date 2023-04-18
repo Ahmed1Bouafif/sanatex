@@ -11,6 +11,7 @@ export const ServiceCard = ({
   title,
   idx,
   description,
+  subtitle,
   icon: Icon,
   setActiveService,
   activeService,
@@ -27,7 +28,8 @@ export const ServiceCard = ({
     <>
       <motion.div
         onClick={(e) => {
-          console.log(idx, activeService);
+          // console.log(idx, activeService);
+          console.log(description);
           setActiveService((id) => {
             if (id) {
               setPrev(id);
@@ -40,10 +42,12 @@ export const ServiceCard = ({
         <div
           className={` absolute h-full w-full top-0 left-0 group-hover:opacity-100 opacity-0 z-0 transition-all service-card`}
         ></div>
-        {isActive && (
+        {isActive ? (
           <div
             className={` absolute h-full w-full top-0 left-0 bg-black dark:bg-white z-0 transition-all}`}
           ></div>
+        ) : (
+          ''
         )}
 
         {/* <div className="flex justify-center lg:justify-start z-10">
@@ -52,12 +56,20 @@ export const ServiceCard = ({
         {/* </div>  */}
         <div className="flex flex-col justify-center my-auto gap-5  sm:gap-2 z-10 font-semibold ">
           <h3
-            className={`text-center mx-auto text-xl sm:text-lg  dark:group-hover:text-black  group-hover:text-white text-black ${
-              isActive ? 'text-white dark:text-black' : ''
-            } dark:text-white`}
+            className={`text-center mx-auto text-xl sm:text-lg text-black dark:text-white    group-hover:text-white texst-black ${
+              isActive ? 'text-white dark:!text-black' : ''
+            } `}
           >
             {/* {capitalize(t(name))} */}
             {name}
+            <br />
+            <p
+              className={`text-center mx-auto font-normal text-base mt-5 text-black/80 dark:text-white/80    group-hover:text-white texst-black ${
+                isActive ? 'text-white/80 dark:!text-black/80' : ''
+              } `}
+            >
+              {subtitle}
+            </p>
           </h3>
           {/* <button to="#" className="justify-center  flex items-center  text-black transition-all ">
             <h4 className={`group-hover:text-white text-black hidden lg:flex ${isActive ? "text-white" : ""}`}>Mehr lesen</h4>{" "}
@@ -71,7 +83,7 @@ export const ServiceCard = ({
 
       <Collapse isOpened={isActive}>
         <div
-          className={`bg-black dark:bg-white dark:text-black text-white p-8 font-heading sm:hidden`}
+          className={`bg-black dark:bg-white dark:text-black text-white p-8 font-heading md:hidden`}
         >
           {description}
         </div>

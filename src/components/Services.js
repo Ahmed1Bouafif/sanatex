@@ -51,7 +51,7 @@ export const Services = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex lg:hidden flex-col">
+        <div className="hidden md:flex lg:hidden flex-col ">
           <div className="flex justify-center">
             {services.slice(0, 2).map((service) => (
               <motion.div
@@ -163,7 +163,7 @@ export const Services = () => {
         </Collapse>
         <div className="hidden lg:flex lg:flex-col">
           <div className="flex justify-center">
-            {services.slice(0, 4).map((service) => (
+            {services.slice(0, 3).map((service) => (
               <motion.div
                 key={service.title}
                 className="h-[250px] flex-1"
